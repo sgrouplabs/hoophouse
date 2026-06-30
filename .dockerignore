@@ -1,0 +1,19 @@
+# ============================================================================
+# .dockerignore — files excluded from Docker build context
+# ============================================================================
+# Smaller build context = faster builds + smaller images
+# ============================================================================
+
+node_modules
+npm-debug.log
+.git
+.gitignore
+.next
+.env*
+*.md
+Dockerfile
+docker-compose.yml
+.dockerignore
+.DS_Store
+coverage
+.nyc_output
