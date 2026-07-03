@@ -8,6 +8,8 @@
  * Renders the Cal.com scheduling embed. The page-level component is a Server
  * Component (good for SEO/metadata), while the interactive embed is a Client
  * Component imported below.
+ *
+ * DESIGN RULES: No emojis, flat design, Inter font.
  * ============================================================================
  */
 
@@ -18,7 +20,7 @@ import { SITE } from "@/lib/data";
 export const metadata: Metadata = {
   title: `Book Court Time — ${SITE.name}`,
   description:
-    "Reserve a basketball court online at Hoophouse502. Pick your date, time, and court type — powered by Cal.com.",
+    "Reserve a court online at Hoophouse502. Pick your date and time — powered by Cal.com. Get your access code instantly.",
 };
 
 export default function BookingPage() {
@@ -32,7 +34,7 @@ export default function BookingPage() {
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-brand-gray-mid">
             Select a date and time below. You&apos;ll receive a confirmation
-            email immediately after booking.
+            email with your unique access code immediately after booking.
           </p>
         </div>
 
@@ -42,7 +44,7 @@ export default function BookingPage() {
         {/* ---- How it works ---- */}
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
           <div className="text-center">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-orange-light text-xl">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-orange text-lg font-bold text-brand-orange">
               1
             </div>
             <h3 className="mt-3 font-semibold text-brand-black">
@@ -53,25 +55,25 @@ export default function BookingPage() {
             </p>
           </div>
           <div className="text-center">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-orange-light text-xl">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-orange text-lg font-bold text-brand-orange">
               2
             </div>
             <h3 className="mt-3 font-semibold text-brand-black">
-              Confirm &amp; pay
+              Get your access code
             </h3>
             <p className="mt-1 text-sm text-brand-gray-mid">
-              Quick checkout — card or cash at the door options available.
+              Receive a unique door code via email instantly after booking.
             </p>
           </div>
           <div className="text-center">
-            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brand-orange-light text-xl">
+            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full border-2 border-brand-orange text-lg font-bold text-brand-orange">
               3
             </div>
             <h3 className="mt-3 font-semibold text-brand-black">
-              Show up &amp; ball
+              Show up and play
             </h3>
             <p className="mt-1 text-sm text-brand-gray-mid">
-              The court will be ready. Just bring your game.
+              Enter your code at the door and the court is yours.
             </p>
           </div>
         </div>

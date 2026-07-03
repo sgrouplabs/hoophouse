@@ -3,8 +3,8 @@
  * Root Layout (Server Component)
  * ============================================================================
  *
- * Wraps every page. Loads Google fonts (Geist), sets global metadata, and
- * renders the Navbar + Footer around page content.
+ * Wraps every page. Loads Inter font via next/font/google, sets global
+ * metadata, and renders the Navbar + Footer around page content.
  *
  * In Next.js 16 App Router, the root layout MUST export a default component
  * that returns <html><body>…</body></html>. Only one root layout per app.
@@ -12,24 +12,19 @@
  */
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/data";
 
 // --- Fonts -----------------------------------------------------------------
-// Geist is the default Next.js font — clean and modern. The `variable` prop
-// injects a CSS custom property (--font-geist-sans) that globals.css maps to
-// the Tailwind `--font-sans` token.
+// Inter — modern, highly legible sans-serif. Matches the flat, minimalist
+// design system. The `variable` prop injects a CSS custom property
+// (--font-inter) that globals.css maps to the Tailwind --font-sans token.
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -38,18 +33,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.tagline}`,
   description:
-    "Rent a full-size basketball court by the hour in Louisville, KY. NBA-grade hardwood, pro lighting, locker rooms. Book online in seconds.",
+    "Self-service court rental in Louisville, KY. Book online 24/7, get your access code, and play. No staff, no hassle — just book and ball.",
   keywords: [
-    "basketball court rental",
+    "court rental",
     "Louisville gym rental",
     "Hoophouse502",
-    "basketball Louisville KY",
-    "court booking",
+    "self-service court",
+    "court booking Louisville KY",
   ],
   openGraph: {
     title: `${SITE.name} — ${SITE.tagline}`,
     description:
-      "Rent a full-size basketball court by the hour in Louisville, KY. Book online in seconds.",
+      "Self-service court rental in Louisville, KY. Book online 24/7 and play on your schedule.",
     type: "website",
   },
 };
@@ -64,7 +59,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
         {/* Navbar — client component (mobile menu toggle needs useState) */}

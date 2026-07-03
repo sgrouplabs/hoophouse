@@ -21,6 +21,8 @@
  *   2. Create an event type (e.g. "Court Rental — 1 Hour")
  *   3. Copy your event link (e.g. https://cal.com/hoophouse502/court-rental)
  *   4. Paste it into SITE.calcomLink in src/lib/data.ts
+ *
+ * DESIGN RULES: No emojis. Flat design with bordered container.
  * ============================================================================
  */
 
@@ -71,7 +73,16 @@ export default function BookingEmbed() {
         {/* Fallback content shown before the script loads */}
         <div className="flex h-[600px] items-center justify-center text-center">
           <div>
-            <div className="text-4xl">📅</div>
+            {/* Flat calendar icon */}
+            <svg
+              className="mx-auto h-12 w-12 text-brand-gray-border"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" strokeWidth={1.5} />
+              <path d="M16 2v4M8 2v4M3 10h18" strokeWidth={1.5} />
+            </svg>
             <p className="mt-4 text-brand-gray-mid">Loading booking calendar…</p>
             <p className="mt-2 text-sm text-brand-gray-mid">
               If it doesn&apos;t load, use the button below.
@@ -88,7 +99,7 @@ export default function BookingEmbed() {
           rel="noopener noreferrer"
           className="btn-cta"
         >
-          Open booking in new tab →
+          Open booking in new tab &rarr;
         </a>
         <p className="mt-2 text-xs text-brand-gray-mid">
           Powered by Cal.com — free scheduling for small businesses

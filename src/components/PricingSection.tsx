@@ -6,6 +6,9 @@
  * Displays the rental pricing tiers in a responsive card layout.
  * The "popular" tier gets an orange highlight border and badge.
  * Each tier has a "Book This" button that links to /booking.
+ *
+ * DESIGN RULES: Flat design, no emojis. White cards on light gray
+ * background, orange accents on the popular tier.
  * ============================================================================
  */
 
@@ -14,7 +17,7 @@ import { PRICING_TIERS } from "@/lib/data";
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="section-padding bg-brand-gray-light">
+    <section id="pricing" className="section-padding bg-white">
       <div className="mx-auto max-w-7xl">
         {/* ---- Header ---- */}
         <div className="mb-12 text-center">
@@ -34,7 +37,7 @@ export default function PricingSection() {
               key={tier.id}
               className={`card relative ${
                 tier.popular
-                  ? "border-2 border-brand-orange ring-2 ring-brand-orange/20"
+                  ? "border-2 border-brand-orange"
                   : ""
               }`}
             >
@@ -67,7 +70,7 @@ export default function PricingSection() {
                     key={feature}
                     className="flex items-center gap-2 text-sm text-brand-black"
                   >
-                    {/* Checkmark icon */}
+                    {/* Flat checkmark icon */}
                     <svg
                       className="h-4 w-4 flex-shrink-0 text-brand-orange"
                       fill="none"
@@ -101,7 +104,7 @@ export default function PricingSection() {
 
         {/* ---- Note ---- */}
         <p className="mt-8 text-center text-sm text-brand-gray-mid">
-          💡 Need recurring team practice time?{" "}
+          Need recurring team practice time?{" "}
           <Link
             href="/booking"
             className="font-semibold text-brand-orange hover:underline"

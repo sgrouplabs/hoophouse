@@ -5,13 +5,11 @@
  * Navbar (Client Component)
  * ============================================================================
  *
- * Why client?  The mobile hamburger menu toggles with useState — that requires
- * the "use client" directive. The desktop nav is static but lives in the same
- * component for simplicity.
+ * Minimalist header: text logo on the left, "Book Court" orange CTA on the
+ * right. Mobile menu uses a hamburger toggle (requires "use client").
  *
- * LOGO PLACEHOLDER: The <div className="logo-placeholder"> below is where a
- * custom SVG/PNG logo should go. Replace the inline text with an <Image> or
- * <img> tag once the logo asset is ready.
+ * DESIGN RULES: No basketball imagery. Flat white background, black text,
+ * orange accent on the CTA button only.
  * ============================================================================
  */
 
@@ -20,27 +18,23 @@ import { useState } from "react";
 import { SITE, NAV_LINKS } from "@/lib/data";
 
 export default function Navbar() {
-  // Mobile menu open/close state
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-gray-border bg-white/90 backdrop-blur-md">
+    <header className="sticky top-0 z-50 border-b border-brand-gray-border bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
-        {/* ---- Logo Placeholder ---- */}
-        {/* TODO: Replace with <Image src="/logo.svg" …/> when logo asset is ready */}
-        <Link href="/" className="flex items-center gap-2" aria-label={SITE.name}>
-          <div className="logo-placeholder flex h-10 w-10 items-center justify-center rounded-xl bg-brand-orange text-xl font-bold text-white">
-            🏀
-          </div>
-          <span className="text-xl font-bold tracking-tight text-brand-black">
-            {SITE.name}
-          </span>
+        {/* ---- Logo (text-based, flat) ---- */}
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tight text-brand-black"
+          aria-label={SITE.name}
+        >
+          {SITE.name}
         </Link>
 
         {/* ---- Desktop Nav Links ---- */}
         <div className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) =>
-            // Discriminated union: check "cta" in link for type narrowing
             "cta" in link ? (
               <Link key={link.href} href={link.href} className="btn-cta">
                 {link.label}
@@ -64,7 +58,6 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
         >
-          {/* Simple inline SVG icon — no icon library dependency for MVP */}
           <svg
             className="h-7 w-7 text-brand-black"
             fill="none"

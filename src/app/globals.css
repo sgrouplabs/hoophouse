@@ -9,12 +9,13 @@
  * Tailwind theme via `@theme inline`. They become utility classes like
  * `bg-brand-orange`, `text-brand-black`, etc.
  *
- * Color Palette:
+ * Design System (STRICT):
  *   White   → Primary background / surfaces
- *   Black   → Text, headers, dark accents
- *   Orange  → Call-to-action buttons, highlights, brand accent
- * ============================================================================
- */
+ *   Black   → Base typography, headers
+ *   Orange  → Accents, trim, buttons, highlighted text
+ *   Inter   → Modern sans-serif font (no collegiate/stencil)
+ *   Flat    → No gradients, no shadows on primary surfaces, ultra-minimalist
+ * ============================================================================ */
 
 :root {
   /* Core palette */
@@ -43,8 +44,7 @@
   --color-brand-gray-mid: var(--color-gray-mid);
   --color-brand-gray-border: var(--color-gray-border);
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter);
 }
 
 /* ----------------------------------------------------------------------------
@@ -59,7 +59,7 @@ body {
 }
 
 /* ----------------------------------------------------------------------------
- * Smooth scrolling for in-page anchor links (e.g. "#pricing")
+ * Smooth scrolling for in-page anchor links (e.g. "#how-it-works")
  * ---------------------------------------------------------------------------- */
 
 html {
@@ -73,7 +73,7 @@ html {
 
 @layer components {
   .btn-cta {
-    @apply inline-flex items-center justify-center rounded-xl bg-brand-orange px-6 py-3 text-base font-semibold text-white shadow-lg transition-all duration-200 hover:bg-brand-orange-dark hover:shadow-xl active:scale-95;
+    @apply inline-flex items-center justify-center rounded-xl bg-brand-orange px-6 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-brand-orange-dark active:scale-95;
   }
 
   .btn-outline {
@@ -81,7 +81,7 @@ html {
   }
 
   .card {
-    @apply rounded-2xl border border-brand-gray-border bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md;
+    @apply rounded-2xl border border-brand-gray-border bg-white p-6 transition-shadow duration-200 hover:shadow-md;
   }
 
   .section-padding {

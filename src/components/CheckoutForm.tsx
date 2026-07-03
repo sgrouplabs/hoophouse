@@ -8,14 +8,14 @@
  * Payment UI Prototype — this is a FRONT-END ONLY mock for the MVP.
  *
  * What it does:
- *   ✓ Displays a booking summary (selected court, time, price)
- *   ✓ Captures name, email, and phone
- *   ✓ Shows a "Pay & Confirm" button
- *   ✓ Simulates a payment submission with a loading state
+ *   - Displays a booking summary (selected court, time, price)
+ *   - Captures name, email, and phone
+ *   - Shows a "Pay & Confirm" button
+ *   - Simulates a payment submission with a loading state
  *
  * What it DOESN'T do (yet):
- *   ✗ Process real payments
- *   ✗ Validate against a real payment gateway
+ *   - Process real payments
+ *   - Validate against a real payment gateway
  *
  * NEXT STEPS — Connect to Stripe or Square:
  *   1. Install Stripe SDK:   npm install @stripe/stripe-js
@@ -28,6 +28,8 @@
  *   Square alternative:
  *     npm install @square/web-sdk
  *     Replace handleSubmit() with Square Web Payments SDK integration
+ *
+ * DESIGN RULES: No emojis, flat design, Inter font.
  * ============================================================================
  */
 
@@ -99,7 +101,22 @@ export default function CheckoutForm({
     return (
       <div className="mx-auto max-w-lg text-center">
         <div className="card border-2 border-green-500 bg-green-50">
-          <div className="text-5xl">✅</div>
+          {/* Flat checkmark icon */}
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-green-500">
+            <svg
+              className="h-8 w-8 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={3}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </div>
           <h2 className="mt-4 text-2xl font-bold text-brand-black">
             Booking Confirmed!
           </h2>
@@ -147,7 +164,7 @@ export default function CheckoutForm({
           }}
           className="btn-outline mt-6"
         >
-          ← Book another session
+          &larr; Book another session
         </button>
       </div>
     );
@@ -218,7 +235,7 @@ export default function CheckoutForm({
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                placeholder="Michael Jordan"
+                placeholder="John Doe"
                 className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
               />
             </div>
@@ -232,7 +249,7 @@ export default function CheckoutForm({
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="mj@hoops.com"
+                placeholder="john@example.com"
                 className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
               />
             </div>
@@ -253,8 +270,22 @@ export default function CheckoutForm({
 
             {/* --- Error message --- */}
             {error && (
-              <div className="rounded-xl bg-red-50 px-4 py-3 text-sm text-red-600">
-                ⚠️ {error}
+              <div className="flex items-center gap-2 rounded-xl bg-red-50 px-4 py-3 text-sm text-red-600">
+                {/* Flat alert icon */}
+                <svg
+                  className="h-4 w-4 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 9v2m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                {error}
               </div>
             )}
 
@@ -288,13 +319,13 @@ export default function CheckoutForm({
                   Processing payment…
                 </span>
               ) : (
-                <>💳 Pay &amp; Confirm — {tier.priceLabel}</>
+                <>Pay &amp; Confirm — {tier.priceLabel}</>
               )}
             </button>
 
             {/* --- Security note --- */}
             <p className="text-center text-xs text-brand-gray-mid">
-              🔒 This is a demo checkout. No real payment is processed.
+              This is a demo checkout. No real payment is processed.
               <br />
               Stripe / Square integration will be added in the next iteration.
             </p>
@@ -339,7 +370,7 @@ export default function CheckoutForm({
               <ul className="space-y-1 text-xs text-brand-black">
                 {tier.features.map((f) => (
                   <li key={f} className="flex items-center gap-1.5">
-                    <span className="text-brand-orange">✓</span> {f}
+                    <span className="text-brand-orange">&check;</span> {f}
                   </li>
                 ))}
               </ul>
@@ -359,7 +390,7 @@ export default function CheckoutForm({
 
             {/* Location */}
             <div className="mt-4 rounded-lg bg-white p-3 text-xs text-brand-gray-mid">
-              📍 {SITE.address}
+              {SITE.address}
             </div>
           </div>
         </div>

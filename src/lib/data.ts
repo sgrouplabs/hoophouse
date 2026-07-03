@@ -4,13 +4,14 @@
  * ============================================================================
  *
  * Single source of truth for all gym info, navigation links, pricing, and
- * feature copy. Every component imports from here so that changing a phone
- * number, Cal.com link, or court rate happens in ONE place.
+ * "how it works" steps. Every component imports from here so that changing
+ * a phone number, Cal.com link, or court rate happens in ONE place.
  *
- * NOTE: `as const` gives us literal types so TypeScript can catch typos in
- * component code (e.g. `SITE.name` is typed as `"Hoophouse502"`, not `string`).
- * ============================================================================
- */
+ * Design rules enforced across the app:
+ *   - No basketball imagery, emojis, or court vectors
+ *   - Pure white background, black text, orange accents
+ *   - Inter font, flat design, ultra-minimalist
+ * ============================================================================ */
 
 // -----------------------------------------------------------------------------
 // Site / Business Identity
@@ -21,7 +22,7 @@ export const SITE = {
   name: "Hoophouse502",
 
   /** Longer tagline used in hero and meta descriptions. */
-  tagline: "Louisville's premier basketball gym rental",
+  tagline: "Louisville's premier self-service court rental",
 
   /** Full street address — displayed on the landing page and footer. */
   address: "1000 Flaget Ave, Louisville, KY 40203",
@@ -36,81 +37,73 @@ export const SITE = {
   /**
    * Cal.com scheduling link.
    * Replace `hoophouse502` with your actual Cal.com username once the
-   * account is created. The free tier supports a single event type which
-   * is perfect for an MVP court-booking flow.
+   * account is created.
    * @see https://cal.com  →  Sign up  →  Copy your event link
    */
   calcomLink: "https://cal.com/hoophouse502/court-rental",
 
-  /**
-   * Instagram handle (used for social link in footer).
-   * Update once the business IG is created.
-   */
+  /** Instagram handle (used for social link in footer). */
   instagram: "https://instagram.com/hoophouse502",
+
+  /** Liability waiver page (placeholder — create later). */
+  waiverLink: "/waiver",
 } as const;
 
 // -----------------------------------------------------------------------------
 // Navigation Links
 // -----------------------------------------------------------------------------
 //
-// The `cta` flag marks links that should render as prominent orange buttons
-// in the navbar. TypeScript note: because only some entries have `cta`,
-// `NAV_LINKS` becomes a discriminated union — use the `"cta" in link` pattern
-// when filtering (see Navbar.tsx).
+// Minimalist nav: logo left, single CTA right.
+// The `cta` flag marks the orange button variant.
 
 export const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Courts & Pricing", href: "/#pricing" },
-  { label: "Book Court", href: "/booking" },
-  { label: "Checkout", href: "/checkout", cta: true },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Book Court", href: "/booking", cta: true },
 ] as const;
 
 // -----------------------------------------------------------------------------
-// Gym Features (shown on landing page)
+// How It Works (3-step process shown on landing page)
 // -----------------------------------------------------------------------------
 
-export interface Feature {
-  icon: string; // Emoji placeholder — swap for SVG/icon library later
+export interface HowItWorksStep {
+  /** Unique identifier for the step. */
+  id: string;
+  /** Step number displayed in the UI. */
+  step: number;
+  /** Short title. */
   title: string;
+  /** Description copy. */
   description: string;
+  /** Icon key — maps to inline SVG in the component. */
+  icon: "calendar" | "lock" | "user";
 }
 
-export const FEATURES: Feature[] = [
+export const HOW_IT_WORKS: HowItWorksStep[] = [
   {
-    icon: "🏀",
-    title: "Full-Size NBA Court",
+    id: "book-online",
+    step: 1,
+    title: "Book Online",
     description:
-      "Regulation 94×50 ft hardwood court with professional-grade backboards and breakaway rims.",
+      "Pick your date and time slot from the calendar. Reservation confirmed instantly — no calls, no waiting.",
+    icon: "calendar",
   },
   {
-    icon: "💡",
-    title: "Pro Lighting & Sound",
+    id: "get-your-code",
+    step: 2,
+    title: "Get Your Code",
     description:
-      "LED stadium lighting and Bluetooth-connected sound system for warmups, drills, or pickup games.",
+      "Receive a unique access code via email instantly after booking. Use it at the door to unlock the facility.",
+    icon: "lock",
   },
   {
-    icon: "🅿️",
-    title: "Free On-Site Parking",
+    id: "play",
+    step: 3,
+    title: "Play",
     description:
-      "Ample, well-lit parking right outside the door. No circling the block with gear.",
-  },
-  {
-    icon: "🚿",
-    title: "Locker Rooms & Showers",
-    description:
-      "Clean, private changing rooms and hot showers so you leave fresh after every session.",
-  },
-  {
-    icon: "📺",
-    title: "Scoreboard & Shot Clocks",
-    description:
-      "Electronic scoreboard and visible shot clocks for competitive scrimmages and team practice.",
-  },
-  {
-    icon: "🏠",
-    title: "Climate Controlled",
-    description:
-      "Heated and air-conditioned year-round so the court is always game-ready, rain or snow.",
+      "Show up, enter your code, and the court is yours. 24/7 self-service access means you play on your schedule.",
+    icon: "user",
   },
 ];
 
@@ -119,13 +112,13 @@ export const FEATURES: Feature[] = [
 // -----------------------------------------------------------------------------
 
 export interface PricingTier {
-  id: string; // Used in checkout flow for booking selection
+  id: string;
   name: string;
   duration: string;
-  price: number; // USD
-  priceLabel: string; // Display string e.g. "$40"
+  price: number;
+  priceLabel: string;
   features: string[];
-  popular?: boolean; // Highlight one tier
+  popular?: boolean;
 }
 
 export const PRICING_TIERS: PricingTier[] = [
