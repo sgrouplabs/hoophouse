@@ -3,8 +3,12 @@
  * Root Layout (Server Component)
  * ============================================================================
  *
- * Wraps every page. Loads Inter font via next/font/google, sets global
+ * Wraps every page. Loads Anton + Epilogue via next/font/google, sets global
  * metadata, and renders the Navbar + Footer around page content.
+ *
+ * Typography (matching AmeriSports):
+ *   Anton    → Headings (h1, h2, h3) — bold condensed sans-serif, uppercase
+ *   Epilogue → Body text, nav, buttons — modern sans-serif (400/700)
  *
  * In Next.js 16 App Router, the root layout MUST export a default component
  * that returns <html><body>…</body></html>. Only one root layout per app.
@@ -12,20 +16,28 @@
  */
 
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Anton, Epilogue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/data";
 
 // --- Fonts -----------------------------------------------------------------
-// Inter — modern, highly legible sans-serif. Matches the flat, minimalist
-// design system. The `variable` prop injects a CSS custom property
-// (--font-inter) that globals.css maps to the Tailwind --font-sans token.
-
-const inter = Inter({
-  variable: "--font-inter",
+// Anton — bold condensed display font for headings. Matches AmeriSports.
+const anton = Anton({
+  variable: "--font-anton",
+  weight: "400",
   subsets: ["latin"],
+  display: "swap",
+});
+
+// Epilogue — modern sans-serif for body, nav, buttons. Matches AmeriSports.
+const epilogue = Epilogue({
+  variable: "--font-epilogue",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
 });
 
 // --- Metadata (SEO) --------------------------------------------------------
@@ -59,7 +71,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} h-full antialiased`}
+      className={`${anton.variable} ${epilogue.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
         {/* Navbar — client component (mobile menu toggle needs useState) */}

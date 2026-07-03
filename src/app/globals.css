@@ -13,7 +13,8 @@
  *   White   → Primary background / surfaces
  *   Black   → Base typography, headers
  *   Orange  → Accents, trim, buttons, highlighted text
- *   Inter   → Modern sans-serif font (no collegiate/stencil)
+ *   Anton   → Headings (bold condensed, uppercase) — matches AmeriSports
+ *   Epilogue → Body text, nav, buttons — matches AmeriSports
  *   Flat    → No gradients, no shadows on primary surfaces, ultra-minimalist
  * ============================================================================ */
 
@@ -31,6 +32,10 @@
   /* Semantic tokens */
   --background: var(--color-white);
   --foreground: var(--color-black);
+
+  /* Font tokens */
+  --font-display: var(--font-anton);
+  --font-sans: var(--font-epilogue);
 }
 
 @theme inline {
@@ -44,7 +49,8 @@
   --color-brand-gray-mid: var(--color-gray-mid);
   --color-brand-gray-border: var(--color-gray-border);
 
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-epilogue);
+  --font-display: var(--font-anton);
 }
 
 /* ----------------------------------------------------------------------------
@@ -54,8 +60,18 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  font-family: var(--font-epilogue), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ----------------------------------------------------------------------------
+ * Heading styles — Anton font, uppercase (matching AmeriSports)
+ * ---------------------------------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-anton), var(--font-epilogue), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
 }
 
 /* ----------------------------------------------------------------------------
