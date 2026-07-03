@@ -92,6 +92,14 @@ export default function Footer() {
                   Instagram
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/admin/login"
+                  className="transition-colors hover:text-white"
+                >
+                  Admin Login
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

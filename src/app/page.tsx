@@ -20,6 +20,7 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import SchedulingSection from "@/components/SchedulingSection";
 import PricingSection from "@/components/PricingSection";
+import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 
 export default function HomePage() {
@@ -36,6 +37,9 @@ export default function HomePage() {
 
       {/* Pricing — court rental tiers */}
       <PricingSection />
+
+      {/* FAQ — accordion with common questions */}
+      <FAQ />
 
       {/* Final CTA band — orange, bold, converts */}
       <CTASection />
