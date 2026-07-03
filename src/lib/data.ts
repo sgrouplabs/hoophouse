@@ -45,6 +45,9 @@ export const SITE = {
   /** Instagram handle (used for social link in footer). */
   instagram: "https://instagram.com/hoophouse502",
 
+  /** Privacy policy page. */
+  privacyLink: "/privacy",
+
   /** Liability waiver page (placeholder — create later). */
   waiverLink: "/waiver",
 } as const;

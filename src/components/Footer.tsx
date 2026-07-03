@@ -78,6 +78,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href={SITE.privacyLink}
+                  className="transition-colors hover:text-white"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={SITE.instagram}
                   className="transition-colors hover:text-white"
                 >
