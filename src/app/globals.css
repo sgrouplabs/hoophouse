@@ -25,6 +25,7 @@
   --color-orange: #ff6b1a; /* Primary CTA / accent */
   --color-orange-dark: #e55500; /* Hover / active state */
   --color-orange-light: #fff0e6; /* Subtle orange background tint */
+  --color-gofundme-orange: #ffa500; /* GoFundMe banner text color */
   --color-gray-light: #f5f5f5; /* Card backgrounds */
   --color-gray-mid: #a3a3a3; /* Secondary text */
   --color-gray-border: #e5e5e5; /* Borders / dividers */
@@ -45,6 +46,7 @@
   --color-brand-orange: var(--color-orange);
   --color-brand-orange-dark: var(--color-orange-dark);
   --color-brand-orange-light: var(--color-orange-light);
+  --color-brand-gofundme-orange: var(--color-gofundme-orange);
   --color-brand-gray-light: var(--color-gray-light);
   --color-brand-gray-mid: var(--color-gray-mid);
   --color-brand-gray-border: var(--color-gray-border);
@@ -102,5 +104,65 @@ html {
 
   .section-padding {
     @apply px-6 py-16 md:px-12 md:py-24;
+  }
+}
+
+/* ----------------------------------------------------------------------------
+ * GoFundMe Donation Banner — Full-width animated ticker
+ * ---------------------------------------------------------------------------- */
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.donation-banner {
+  background: var(--color-black);
+  color: var(--color-gofundme-orange);
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.donation-banner__track {
+  display: inline-block;
+  animation: marquee-scroll 20s linear infinite;
+  padding-left: 100%;
+}
+
+.donation-banner__link {
+  color: var(--color-gofundme-orange);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.donation-banner__link:hover {
+  opacity: 0.8;
+}
+
+.donation-banner__link:focus-visible {
+  outline: 2px solid var(--color-gofundme-orange);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Pause animation on hover for better UX */
+.donation-banner:hover .donation-banner__track {
+  animation-play-state: paused;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .donation-banner__track {
+    animation: none;
+    padding-left: 0;
   }
 }

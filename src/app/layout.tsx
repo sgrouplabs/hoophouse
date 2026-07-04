@@ -74,6 +74,20 @@ export default function RootLayout({
       className={`${anton.variable} ${epilogue.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-white">
+        {/* GoFundMe Donation Banner — Full-width animated ticker at very top */}
+        <div className="donation-banner" role="region" aria-label="Donation announcement">
+          <div className="donation-banner__track" aria-hidden="true">
+            <a
+              href="https://gofund.me/8072dffdc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="donation-banner__link"
+            >
+              We are accepting donations. Click here to donate to our GoFundMe!
+            </a>
+          </div>
+        </div>
+
         {/* Navbar — client component (mobile menu toggle needs useState) */}
         <Navbar />
 
