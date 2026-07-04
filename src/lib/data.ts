@@ -43,7 +43,7 @@ export const SITE = {
   calcomLink: "https://cal.com/hoophouse502/court-rental",
 
   /** Instagram handle (used for social link in footer). */
-  instagram: "https://instagram.com/hoophouse502",
+  instagram: "https://www.instagram.com/hoophouse502?igsh=d2ZnYzU5ZG9zYzV3",
 
   /** Privacy policy page. */
   privacyLink: "/privacy",
