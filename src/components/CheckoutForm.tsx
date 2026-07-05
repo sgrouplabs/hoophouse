@@ -263,7 +263,7 @@ export default function CheckoutForm({
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
-                placeholder="(502) 555-0100"
+                placeholder="502-550-6954"
                 className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
               />
             </div>

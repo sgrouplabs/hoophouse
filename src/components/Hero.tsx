@@ -27,7 +27,7 @@ export default function Hero() {
 
           {/* Sub-headline */}
           <p className="mt-6 text-lg text-brand-gray-mid md:text-xl">
-            Hoophouse502 is a <strong className="font-semibold text-brand-black">24/7 self-service</strong> court rental
+            <strong className="font-semibold text-brand-black">HOOPHOUSE502</strong> is a <strong className="font-semibold text-brand-black">24/7 self-service</strong> court rental
             in Louisville, KY. Book online, get your access code, and play —
             no staff, no waiting, no hassle.
           </p>

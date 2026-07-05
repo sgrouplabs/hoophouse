@@ -304,10 +304,10 @@ export default function FAQ() {
               <p className="text-sm text-brand-black/70">
                 Call or text us at{" "}
                 <a
-                  href="tel:+15025550100"
+                  href="tel:+15025506954"
                   className="font-semibold text-brand-orange hover:underline"
                 >
-                  (502) 555-0100
+                  502-550-6954
                 </a>
                 , or email{" "}
                 <a

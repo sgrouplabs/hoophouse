@@ -6,7 +6,7 @@
  * Route: "/about"
  *
  * Tells the story of Flaget Hoop House 502 — founded by Paul White, who
- * inherited the building from his grandfather and transformed it into a
+ * inherited the building and transformed it into a
  * community hub offering basketball, tutoring, and mental health support
  * in Louisville's Shawnee neighborhood.
  *
@@ -27,11 +27,11 @@ import { SITE } from "@/lib/data";
 export const metadata: Metadata = {
   title: "About Flaget Hoop House 502 — Our Story",
   description:
-    "Founded by Paul White to honor his grandfather's legacy, Flaget Hoop House 502 is a Louisville community hub for youth basketball, tutoring, and mental health support in the Shawnee neighborhood.",
+    "Flaget Hoop House 502 is a Louisville community hub for youth basketball, tutoring, and mental health support in the Shawnee neighborhood.",
   openGraph: {
     title: "About Flaget Hoop House 502 — Our Story",
     description:
-      "Paul White inherited his grandfather's building and turned it into a safe space for youth basketball, tutoring, and mental health support in Louisville's Shawnee neighborhood.",
+      "Paul White inherited a building and turned it into a safe space for youth basketball, tutoring, and mental health support in Louisville's Shawnee neighborhood.",
     type: "website",
   },
 };
@@ -48,7 +48,7 @@ export default function AboutPage() {
           <p className="mt-6 text-lg md:text-xl text-brand-gray-mid">
             A safe space. A tutoring center. A youth basketball community.
             <br />
-            All in honor of a grandfather's legacy.
+            In honor of a legacy of giving back.
           </p>
         </div>
       </section>
@@ -61,21 +61,6 @@ export default function AboutPage() {
           </h2>
 
           <div className="space-y-6 text-lg leading-relaxed text-brand-black/80">
-            <p>
-              The building at <strong>604 S 44th St in Louisville's Shawnee neighborhood</strong>
-              had been in Paul White's family for decades. It was his grandfather's — a
-              modest, unassuming space that had served as a community gathering place
-              for generations. His grandfather believed deeply that young people needed
-              a place to go, a place to belong, and a place where they could channel
-              their energy into something positive.
-            </p>
-
-            <p>
-              When Paul inherited the building, he faced a choice: sell it, let it sit
-              empty, or honor his grandfather's vision by turning it into the community
-              hub it was always meant to be. He chose the third option.
-            </p>
-
             <p>
               With help from family, friends, and the Louisville basketball community,
               Paul began renovating the space — installing a regulation basketball court
@@ -158,10 +143,7 @@ export default function AboutPage() {
           <div className="card p-8 md:p-12">
             <blockquote className="space-y-4 text-lg leading-relaxed text-brand-black/80">
               <p>
-                "My grandfather always said that young people don't need more
-                restrictions — they need more opportunities. This building was his
-                way of giving back to the neighborhood he loved. When I inherited it,
-                I knew I had to honor that spirit."
+                "Young people don't need more restrictions — they need more opportunities. This building was his way of giving back to the neighborhood he loved. When I inherited it, I knew I had to honor that spirit."
               </p>
               <footer className="text-brand-orange font-semibold">
                 — Paul White, Founder
@@ -174,7 +156,7 @@ export default function AboutPage() {
               Paul White is a Louisville native with a deep love for his city and its
               communities. As Founder and Community Director of Flaget Hoop House 502,
               he oversees basketball programming, tutoring partnerships, and mental
-              health initiatives — ensuring the space fulfills his grandfather's vision
+              health initiatives — ensuring the space fulfills the original vision
               for the next generation.
             </p>
           </div>

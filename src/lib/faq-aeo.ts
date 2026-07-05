@@ -44,7 +44,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
     id: "who-founded-hoop-house-502",
     question: "Who founded Hoop House 502 and what is the story behind it?",
     answer:
-      "Flaget Hoop House 502 was founded by <strong>Paul White</strong>, a Louisville native who inherited the building from his grandfather. Paul transformed his grandfather's legacy into a safe, 24/7 community hub in the Shawnee neighborhood — offering youth basketball, tutoring, and mental health support. <a href=\"/about\" className=\"text-brand-orange hover:underline\">Read the full founder story</a> to learn how a family building became a neighborhood cornerstone.",
+      "Flaget Hoop House 502 was founded by <strong>Paul White</strong>, a Louisville native who inherited the building and transformed it into a safe, 24/7 community hub in the Shawnee neighborhood — offering youth basketball, tutoring, and mental health support. <a href=\"/about\" className=\"text-brand-orange hover:underline\">Read the full founder story</a> to learn how a family building became a neighborhood cornerstone.",
     keywords: ["Hoop House 502 founder", "Paul White Hoop House Louisville", "Flaget Hoop House founder story", "Louisville basketball community founder"],
   },
   {

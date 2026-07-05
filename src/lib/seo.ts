@@ -36,16 +36,16 @@ export const hoophouseJsonLd = {
         "name": "Paul White",
         "jobTitle": "Founder & Community Director",
         "description":
-          "Louisville native who inherited the Flaget Avenue building from his grandfather and transformed it into a youth community hub.",
+          "Louisville native who inherited the Flaget Avenue building and transformed it into a youth community hub.",
       },
       "foundingDate": "2023",
       "description":
-        "Safe space, tutoring, and youth basketball community in Louisville's Shawnee neighborhood honoring the legacy of the late owner's grandfather.",
+        "Safe space, tutoring, and youth basketball community in Louisville's Shawnee neighborhood.",
       "url": "https://hoophouse502.com",
       "logo": "https://hoophouse502.com/logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-502-555-0100",
+        "telephone": "+1-502-550-6954",
         "contactType": "customer service",
         "availableLanguage": ["English"],
       },
@@ -87,7 +87,7 @@ export const hoophouseJsonLd = {
       "name": "Flaget Hoop House 502",
       "image": "https://hoophouse502.com/logo.png",
       "url": "https://hoophouse502.com",
-      "telephone": "+1-502-555-0100",
+      "telephone": "+1-502-550-6954",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "604 S 44th St",
@@ -167,7 +167,7 @@ export const rootMetadata: Metadata = {
   openGraph: {
     title: "Flaget Hoop House 502 — Youth Basketball & Community",
     description:
-      "Safe space, tutoring, and youth basketball in Louisville's Shawnee neighborhood. Founded by Paul White to honor his grandfather's legacy.",
+      "Safe space, tutoring, and youth basketball in Louisville's Shawnee neighborhood. Founded by Paul White to honor a legacy of community service.",
     type: "website",
     locale: "en_US",
     siteName: "Flaget Hoop House 502",

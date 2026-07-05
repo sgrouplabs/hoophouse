@@ -72,12 +72,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-white">
         {/* GoFundMe Donation Banner — black bg, orange text, animated ticker */}
         <div
-          className="flex w-full items-center justify-center overflow-hidden bg-black py-2.5 text-center text-sm text-[#ffa500] sm:text-base"
+          className="flex w-full items-center justify-center overflow-hidden bg-black py-2.5"
           role="region"
           aria-label="Donation announcement"
         >
           <div
-            className="inline-block"
+            className="inline-block whitespace-nowrap"
             aria-hidden="true"
             style={{
               animation: 'marquee-scroll 20s linear infinite',

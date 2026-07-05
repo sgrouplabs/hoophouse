@@ -19,7 +19,7 @@
 
 export const SITE = {
   /** Short brand name shown in the nav and footer. */
-  name: "Hoophouse502",
+  name: "HOOPHOUSE502",
 
   /** Longer tagline used in hero and meta descriptions. */
   tagline: "Louisville's premier self-service court rental",
@@ -28,8 +28,8 @@ export const SITE = {
   address: "1000 Flaget Ave, Louisville, KY 40203",
 
   /** Clickable phone link (tel: format). */
-  phoneDisplay: "(502) 555-0100",
-  phoneHref: "tel:+15025550100",
+  phoneDisplay: "502-550-6954",
+  phoneHref: "tel:+15025506954",
 
   /** Contact email. */
   email: "book@hoophouse502.com",
@@ -200,7 +200,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "is-there-staff-on-site",
     question: "Is there staff on site?",
     answer:
-      "No — Hoophouse502 is a fully self-service facility. There is no front desk or on-site staff. Everything from booking to entry is automated. Security cameras are monitored remotely for safety. If you need assistance, call or text us at (502) 555-0100.",
+      "No — <strong>HOOPHOUSE502</strong> is a fully self-service facility. There is no front desk or on-site staff. Everything from booking to entry is automated. Security cameras are monitored remotely for safety. If you need assistance, call or text us at 502-550-6954.",
   },
   {
     id: "cancellation-policy",
@@ -224,7 +224,7 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "hours-of-operation",
     question: "What are your hours?",
     answer:
-      "Hoophouse502 is open 24/7. You can book a court at any time, day or night, including holidays. The self-service access system means you can play at 2 AM if that's your schedule.",
+      "<strong>HOOPHOUSE502</strong> is open 24/7. You can book a court at any time, day or night, including holidays. The self-service access system means you can play at 2 AM if that's your schedule.",
   },
 ];
 
