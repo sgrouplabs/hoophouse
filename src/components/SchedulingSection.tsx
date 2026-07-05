@@ -15,6 +15,13 @@
 
 import { useEffect, useRef } from "react";
 
+/* ---- Global type augmentation for Cal.com SDK ---- */
+declare global {
+  interface Window {
+    Cal?: any;
+  }
+}
+
 export default function SchedulingSection() {
   const containerRef = useRef<HTMLDivElement>(null);
 
