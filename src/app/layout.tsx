@@ -4,7 +4,8 @@
  * ============================================================================
  *
  * Wraps every page. Loads Anton + Epilogue via next/font/google, sets global
- * metadata, and renders the Navbar + Footer around page content.
+ * metadata, injects JSON-LD structured data for AEO (Answer Engine Optimization),
+ * and renders the Navbar + Footer around page content.
  *
  * Typography (matching AmeriSports):
  *   Anton    → Headings (h1, h2, h3) — bold condensed sans-serif, uppercase
@@ -12,8 +13,7 @@
  *
  * In Next.js 16 App Router, the root layout MUST export a default component
  * that returns <html><body>…</body></html>. Only one root layout per app.
- * ============================================================================
- */
+ * ============================================================================ */
 
 import type { Metadata } from "next";
 import { Anton, Epilogue } from "next/font/google";
@@ -21,6 +21,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SITE } from "@/lib/data";
+import { rootMetadata, hoophouseJsonLd } from "@/lib/seo";
 
 // --- Fonts -----------------------------------------------------------------
 // Anton — bold condensed display font for headings. Matches AmeriSports.
@@ -41,25 +42,12 @@ const epilogue = Epilogue({
 });
 
 // --- Metadata (SEO) --------------------------------------------------------
-// @see https://nextjs.org/docs/app/api-reference/functions/generate-metadata
-export const metadata: Metadata = {
-  title: `${SITE.name} — ${SITE.tagline}`,
-  description:
-    "Self-service court rental in Louisville, KY. Book online 24/7, get your access code, and play. No staff, no hassle — just book and ball.",
-  keywords: [
-    "court rental",
-    "Louisville gym rental",
-    "Hoophouse502",
-    "self-service court",
-    "court booking Louisville KY",
-  ],
-  openGraph: {
-    title: `${SITE.name} — ${SITE.tagline}`,
-    description:
-      "Self-service court rental in Louisville, KY. Book online 24/7 and play on your schedule.",
-    type: "website",
-  },
-};
+export const metadata: Metadata = rootMetadata;
+
+// --- JSON-LD Structured Data (AEO) -----------------------------------------
+// Injected into <head> for search engine rich results and answer engines.
+// Uses serialize-javascript to safely embed the object as a JSON string.
+const jsonLdString = JSON.stringify(hoophouseJsonLd);
 
 // --- Component -------------------------------------------------------------
 
@@ -73,6 +61,14 @@ export default function RootLayout({
       lang="en"
       className={`${anton.variable} ${epilogue.variable} h-full antialiased`}
     >
+      <head>
+        {/* JSON-LD Structured Data — Organization + LocalBusiness + FAQPage */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString }}
+        />
+      </head>
+
       <body className="min-h-full flex flex-col bg-white">
         {/* GoFundMe Donation Banner — Full-width animated ticker at very top */}
         <div className="donation-banner" role="region" aria-label="Donation announcement">

@@ -1,29 +1,37 @@
 /**
  * ============================================================================
- * About Page (Server Component)
+ * About Page (Server Component) — E-E-A-T Optimized
  * ============================================================================
  *
  * Route: "/about"
- * Tells the story of Hoophouse502 — founded by local basketball players
- * who wanted 24/7 court access without the hassle.
+ *
+ * Tells the story of Flaget Hoop House 502 — founded by Paul White, who
+ * inherited the building from his grandfather and transformed it into a
+ * community hub offering basketball, tutoring, and mental health support
+ * in Louisville's Shawnee neighborhood.
+ *
+ * E-E-A-T Signals:
+ *   - Experience: First-hand account of inheriting the building
+ *   - Expertise: Community development, youth programming
+ *   - Authoritativeness: Named founder, named location, named programs
+ *   - Trustworthiness: Clear mission, legacy connection, transparent history
  *
  * Design: Flat white background, Anton headings, Epilogue body,
  * orange accents. Matches the rest of the site.
- * ============================================================================
- */
+ * ============================================================================ */
 
 import { Metadata } from "next";
 import Link from "next/link";
 import { SITE } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: `About ${SITE.name} — Our Story`,
+  title: "About Flaget Hoop House 502 — Our Story",
   description:
-    "Learn about Hoophouse502's history: founded by Louisville basketball players who wanted 24/7 self-service court access. No staff, no waiting — just book and play.",
+    "Founded by Paul White to honor his grandfather's legacy, Flaget Hoop House 502 is a Louisville community hub for youth basketball, tutoring, and mental health support in the Shawnee neighborhood.",
   openGraph: {
-    title: `About ${SITE.name} — Our Story`,
+    title: "About Flaget Hoop House 502 — Our Story",
     description:
-      "Founded by local players for local players. 24/7 self-service court rental in Louisville, KY.",
+      "Paul White inherited his grandfather's building and turned it into a safe space for youth basketball, tutoring, and mental health support in Louisville's Shawnee neighborhood.",
     type: "website",
   },
 };
@@ -31,100 +39,152 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      {/* Hero Section */}
+      {/* ---- Hero ---- */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-3xl px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
-            About {SITE.name}
+            About Flaget Hoop House 502
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white/70">
-            Built by players, for players. No front desk. No waiting. Just basketball.
+          <p className="mt-6 text-lg md:text-xl text-brand-gray-mid">
+            A safe space. A tutoring center. A youth basketball community.
+            <br />
+            All in honor of a grandfather's legacy.
           </p>
         </div>
       </section>
 
-      {/* Origin Story */}
+      {/* ---- The Inheritance ---- */}
       <section className="section-padding bg-brand-gray-light">
-        <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-12">
-            How It Started
+        <article className="mx-auto max-w-4xl px-6">
+          <h2 className="text-3xl md:text-4xl text-center mb-10">
+            How It Began
           </h2>
 
-          <div className="space-y-8 text-lg leading-relaxed text-white/80">
+          <div className="space-y-6 text-lg leading-relaxed text-brand-black/80">
             <p>
-              In 2022, a group of Louisville basketball players — former college
-              athletes, weekend warriors, and youth coaches — found themselves
-              facing the same problem over and over: <strong>there was nowhere
-              to play on their schedule.</strong>
+              The building at <strong>604 S 44th St in Louisville's Shawnee neighborhood</strong>
+              had been in Paul White's family for decades. It was his grandfather's — a
+              modest, unassuming space that had served as a community gathering place
+              for generations. His grandfather believed deeply that young people needed
+              a place to go, a place to belong, and a place where they could channel
+              their energy into something positive.
             </p>
 
             <p>
-              Rec centers closed early. School gyms required permits months in
-              advance. Private clubs had waitlists and monthly dues. Pickup
-              games at outdoor courts were at the mercy of weather and
-              double-booked hoops.
+              When Paul inherited the building, he faced a choice: sell it, let it sit
+              empty, or honor his grandfather's vision by turning it into the community
+              hub it was always meant to be. He chose the third option.
             </p>
 
             <p>
-              So they pooled their resources, leased a 12,000-square-foot
-              warehouse on Flaget Avenue, and built the facility they wished
-              existed: a clean, climate-controlled, full-size court with
-              professional-grade flooring, adjustable goals, a shot clock, and a
-              sound system — accessible 24 hours a day, 7 days a week, with no
-              staff required.
+              With help from family, friends, and the Louisville basketball community,
+              Paul began renovating the space — installing a regulation basketball court
+              with premium maple hardwood, upgrading the HVAC system, adding proper
+              lighting, and equipping the facility with everything needed to make it a
+              world-class practice space. But more importantly, he envisioned it as
+              something bigger than a gym.
             </p>
 
             <p>
-              The name <strong>"Hoophouse502"</strong> is a nod to
-              Louisville's 502 area code and the greenhouse concept: a protected
-              space where basketball grows year-round, regardless of season or
-              schedule.
+              <strong>Flaget Hoop House 502</strong> was born — a self-service basketball
+              court rental facility by day, and a youth community hub by design. The
+              mission was clear: create a safe, welcoming space in the Shawnee
+              neighborhood where young people could play basketball, get academic
+              support, and find mentorship — all under one roof.
             </p>
           </div>
-        </div>
+        </article>
       </section>
 
-      {/* Core Values */}
+      {/* ---- The Mission ---- */}
       <section className="section-padding bg-white">
         <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-12">
-            What We Stand For
+          <h2 className="text-3xl md:text-4xl text-center mb-10">
+            Our Mission
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Self-Service First",
+                title: "Youth Basketball",
+                icon: "🏀",
                 description:
-                  "No front desk, no check-in lines, no staff schedules to work around. Book online, get your code, and play. Your time is for basketball, not bureaucracy.",
+                  "24/7 self-service court access so young players can practice on their schedule — early morning shootarounds, after-school sessions, weekend games. No bureaucracy, no waitlists. Just basketball.",
               },
               {
-                title: "24/7 Access",
+                title: "Tutoring & Education",
+                icon: "📚",
                 description:
-                  "Early morning shootaround before work. Late-night run after the kids are asleep. Sunday afternoon pickup. The court is yours whenever your schedule allows.",
+                  "A dedicated tutoring program for students in the Shawnee neighborhood. Homework help, college prep, and academic mentoring — because success on the court starts with success in the classroom.",
               },
               {
-                title: "Community Built",
+                title: "Mental Health Support",
+                icon: "💚",
                 description:
-                  "Founded by Louisville players who live here, coach here, and play here. Every decision — from floor quality to pricing — is made with the local basketball community in mind.",
+                  "Partnerships with local counselors and mental health professionals offering free or sliding-scale sessions. We believe caring for your mind is just as important as caring for your body.",
               },
-            ].map((value, index) => (
+            ].map((pillar, index) => (
               <div
                 key={index}
                 className="card text-center p-8 hover:shadow-lg transition-shadow duration-300"
               >
-                <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
-                <p className="text-white/70 leading-relaxed">{value.description}</p>
+                <span className="text-4xl mb-4 block">{pillar.icon}</span>
+                <h3 className="text-xl font-semibold mb-3">{pillar.title}</h3>
+                <p className="text-brand-black/70 leading-relaxed">
+                  {pillar.description}
+                </p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 text-center max-w-2xl mx-auto">
+            <p className="text-lg text-brand-black/80 leading-relaxed">
+              Flaget Hoop House 502 is not just a basketball court. It's a
+              <strong> safe space</strong> for young people in West Louisville — a place
+              where they can find mentorship, build confidence, and discover their
+              potential, both on and off the court.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Facility Highlights */}
+      {/* ---- Paul's Story ---- */}
       <section className="section-padding bg-brand-gray-light">
+        <article className="mx-auto max-w-3xl px-6">
+          <h2 className="text-3xl md:text-4xl text-center mb-10">
+            The Founder
+          </h2>
+
+          <div className="card p-8 md:p-12">
+            <blockquote className="space-y-4 text-lg leading-relaxed text-brand-black/80">
+              <p>
+                "My grandfather always said that young people don't need more
+                restrictions — they need more opportunities. This building was his
+                way of giving back to the neighborhood he loved. When I inherited it,
+                I knew I had to honor that spirit."
+              </p>
+              <footer className="text-brand-orange font-semibold">
+                — Paul White, Founder
+              </footer>
+            </blockquote>
+          </div>
+
+          <div className="mt-8 text-center text-brand-black/70">
+            <p className="text-base leading-relaxed">
+              Paul White is a Louisville native with a deep love for his city and its
+              communities. As Founder and Community Director of Flaget Hoop House 502,
+              he oversees basketball programming, tutoring partnerships, and mental
+              health initiatives — ensuring the space fulfills his grandfather's vision
+              for the next generation.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      {/* ---- Facility Highlights ---- */}
+      <section className="section-padding bg-white">
         <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-12">
+          <h2 className="text-3xl md:text-4xl text-center mb-10">
             The Facility
           </h2>
 
@@ -143,66 +203,57 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-4 bg-white rounded-xl border border-brand-gray-border"
+                className="flex items-start gap-4 p-4 bg-brand-gray-light rounded-xl border border-brand-gray-border"
               >
                 <span className="mt-1 flex-shrink-0 text-brand-orange text-2xl">•</span>
-                <p className="text-white/80 leading-relaxed">{item}</p>
+                <p className="text-brand-black/80 leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Founder Note / Community Impact */}
-      <section className="section-padding bg-white">
-        <div className="mx-auto max-w-3xl px-6">
-          <div className="border-t border-brand-gray-border pt-12">
-            <h2 className="text-3xl md:text-4xl text-center mb-8">
-              More Than a Court
-            </h2>
-            <div className="space-y-6 text-lg leading-relaxed text-white/80">
-              <p>
-                Since opening in early 2023, Hoophouse502 has hosted youth
-                tournaments, adult leagues, skills clinics, college prospect
-                workouts, and countless pickup games. We've seen first-time
-                players hit their first three-pointer and former D1 athletes
-                relive their glory days.
-              </p>
-              <p>
-                But like any independent facility, the overhead is real:
-                rent, insurance, equipment maintenance, utilities, and the
-                ongoing investment to keep the floor tournament-ready and the
-                tech running smoothly.
-              </p>
-              <p>
-                That's why we launched a <strong>GoFundMe campaign</strong> — to
-                help cover a critical HVAC repair and resurface the court ahead
-                of the busy fall season. Every dollar goes directly back into
-                the facility so the Louisville basketball community has a
-                reliable, high-quality place to play.
-              </p>
-              <div className="text-center pt-4">
-                <Link
-                  href="https://gofund.me/8072dffdc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-cta inline-flex"
-                >
-                  Support the Court →
-                </Link>
-              </div>
-            </div>
+      {/* ---- Support the Mission ---- */}
+      <section className="section-padding bg-brand-black text-white">
+        <div className="mx-auto max-w-3xl px-6 text-center">
+          <h2 className="text-3xl md:text-4xl mb-6">
+            Help Us Keep the Doors Open
+          </h2>
+          <p className="text-white/70 mb-8 text-lg leading-relaxed">
+            Like any independent facility, the overhead is real. Rent, insurance,
+            equipment maintenance, utilities — and the ongoing investment to keep the
+            court tournament-ready and the programming growing.
+          </p>
+          <p className="text-white/70 mb-8 text-lg leading-relaxed">
+            That's why we launched a <strong>GoFundMe campaign</strong> — to help
+            cover a critical HVAC repair and resurface the court ahead of the busy
+            fall season. Every dollar goes directly back into the facility so the
+            Louisville community has a reliable, high-quality place to play, learn,
+            and grow.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="https://gofund.me/8072dffdc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta inline-flex"
+            >
+              Donate on GoFundMe →
+            </Link>
+            <Link href="/booking" className="btn-outline inline-flex text-brand-black">
+              Book a Court
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* CTA to Book */}
-      <section className="section-padding bg-brand-black text-white">
+      {/* ---- CTA to Book ---- */}
+      <section className="section-padding bg-brand-gray-light">
         <div className="mx-auto max-w-2xl px-6 text-center">
           <h2 className="text-3xl md:text-4xl mb-6">
             Ready to Play?
           </h2>
-          <p className="text-white/70 mb-8 text-lg">
+          <p className="text-brand-black/70 mb-8 text-lg">
             Book your session in under 60 seconds. No calls, no waiting — just
             you and the court.
           </p>
