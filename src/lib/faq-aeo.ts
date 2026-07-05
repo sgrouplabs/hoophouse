@@ -30,7 +30,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
     id: "where-is-hoop-house-502-located",
     question: "Where is Hoop House 502 located in Louisville, KY?",
     answer:
-      "Flaget Hoop House 502 is located at <strong>604 S 44th St in the Shawnee neighborhood of West Louisville</strong> (zip 40214). We have a free parking lot directly in front of the facility, making it easy to find whether you're coming from St. Matthews, Portland, or anywhere else in the metro. <a href=\"/about\" className=\"text-brand-orange hover:underline\">Learn more about our story</a> and community mission, or <a href=\"/\" className=\"text-brand-orange hover:underline\">book a court session</a> today.",
+      "Flaget Hoop House 502 is located at <strong>604 S 44th St in the Shawnee neighborhood of West Louisville</strong> (zip 40214). We have a free parking lot directly in front of the facility, making it easy to find whether you're coming from St. Matthews, Portland, or anywhere else in the metro. <a href=\"/about\" className=\"text-brand-orange hover:underline\">Learn more about our story</a> and community mission, or <a href=\"https://cal.com/hoophouse\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-brand-orange hover:underline\">book a court session</a> today.",
     keywords: ["Hoop House 502 location", "Louisville basketball court address", "Shawnee neighborhood Louisville", "604 S 44th St Louisville"],
   },
   {
@@ -51,14 +51,14 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
     id: "what-programs-offered",
     question: "What programs and services does Hoop House 502 offer for youth in Louisville?",
     answer:
-      "Flaget Hoop House 502 offers three core programs for the Louisville community: <strong>(1) Youth Basketball</strong> — 24/7 self-service court access for players of all ages and skill levels, <strong>(2) Tutoring & Education</strong> — free homework help and college prep for Shawnee neighborhood students, and <strong>(3) Mental Health Support</strong> — partnerships with local counselors offering sliding-scale sessions. We also host youth tournaments, adult leagues, skills clinics, and pickup games. <a href=\"/booking\" className=\"text-brand-orange hover:underline\">Book a court now</a> or <a href=\"/about\" className=\"text-brand-orange hover:underline\">learn more about our programs</a>.",
+      "Flaget Hoop House 502 offers three core programs for the Louisville community: <strong>(1) Youth Basketball</strong> — 24/7 self-service court access for players of all ages and skill levels, <strong>(2) Tutoring & Education</strong> — free homework help and college prep for Shawnee neighborhood students, and <strong>(3) Mental Health Support</strong> — partnerships with local counselors offering sliding-scale sessions. We also host youth tournaments, adult leagues, skills clinics, and pickup games. <a href=\"https://cal.com/hoophouse\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-brand-orange hover:underline\">Book a court now</a> or <a href=\"/about\" className=\"text-brand-orange hover:underline\">learn more about our programs</a>.",
     keywords: ["Hoop House 502 youth programs", "Louisville basketball tutoring", "Shawnee neighborhood programs Louisville", "youth mental health Louisville KY", "community basketball programs Louisville"],
   },
   {
     id: "how-book-court",
     question: "How do I book a basketball court at Hoop House 502 and what does it cost?",
     answer:
-      "Booking a court at Flaget Hoop House 502 is quick and easy — just visit <a href=\"/booking\" className=\"text-brand-orange hover:underline\">our booking page</a>, pick your date and time, and pay online. Half-court rentals start at <strong>$30/hour</strong> (up to 6 players) and full-court rentals are <strong>$50/hour</strong> (up to 14 players). After booking, you'll receive a unique access code via email instantly. No phone calls, no front desk, no waiting.",
+      "Booking a court at Flaget Hoop House 502 is quick and easy — just visit <a href=\"https://cal.com/hoophouse\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-brand-orange hover:underline\">our booking page</a>, pick your date and time, and pay online. Half-court rentals start at <strong>$30/hour</strong> (up to 6 players) and full-court rentals are <strong>$50/hour</strong> (up to 14 players). After booking, you'll receive a unique access code via email instantly. No phone calls, no front desk, no waiting.",
     keywords: ["book basketball court Louisville", "Hoop House 502 pricing", "self-service basketball court Louisville", "how much to rent basketball court Louisville"],
   },
   {
@@ -72,7 +72,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
     id: "what-should-bring",
     question: "What should I bring when I book a court at Hoop House 502?",
     answer:
-      "Just bring your <strong>basketball shoes, water bottle, and your team</strong> — we provide the court, the balls (for half-court rentals), the scoreboard, and the Bluetooth sound system. For full-court rentals, a Gatorade cooler is included. We're located at 604 S 44th St with free parking out front, so arrive early to grab a spot. <a href=\"/booking\" className=\"text-brand-orange hover:underline\">Book your time slot</a> and we'll email you the access code.",
+      "Just bring your <strong>basketball shoes, water bottle, and your team</strong> — we provide the court, the balls (for half-court rentals), the scoreboard, and the Bluetooth sound system. For full-court rentals, a Gatorade cooler is included. We're located at 604 S 44th St with free parking out front, so arrive early to grab a spot. <a href=\"https://cal.com/hoophouse\" target=\"_blank\" rel=\"noopener noreferrer\" className=\"text-brand-orange hover:underline\">Book your time slot</a> and we'll email you the access code.",
     keywords: ["what to bring basketball court Louisville", "Hoophouse 502 what to bring", "self-service gym Louisville"],
   },
   {

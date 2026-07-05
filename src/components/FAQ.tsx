@@ -228,7 +228,9 @@ export default function FAQ() {
               <ul className="space-y-2">
                 <li>
                   <a
-                    href="/"
+                    href="https://cal.com/hoophouse"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-2 text-sm text-brand-orange hover:underline"
                   >
                     <svg

@@ -13,7 +13,7 @@
  */
 
 import Link from "next/link";
-import { PRICING_TIERS } from "@/lib/data";
+import { SITE, PRICING_TIERS } from "@/lib/data";
 
 export default function PricingSection() {
   return (
@@ -91,7 +91,9 @@ export default function PricingSection() {
 
               {/* CTA button */}
               <Link
-                href="/booking"
+                href={SITE.calcomLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`mt-8 w-full ${
                   tier.popular ? "btn-cta" : "btn-outline"
                 }`}
@@ -106,7 +108,9 @@ export default function PricingSection() {
         <p className="mt-8 text-center text-sm text-brand-gray-mid">
           Need recurring team practice time?{" "}
           <Link
-            href="/booking"
+            href={SITE.calcomLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="font-semibold text-brand-orange hover:underline"
           >
             Contact us for bulk discounts

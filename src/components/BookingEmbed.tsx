@@ -27,13 +27,13 @@
  */
 
 import { useEffect, useRef } from "react";
-import { SITE } from "@/lib/data";
 
-// Extract the cal.com path from the full URL.
-// e.g. "https://cal.com/hoophouse502/court-rental" → "hoophouse502/court-rental"
-const calLinkPath = SITE.calcomLink
-  .replace(/^https?:\/\/(www\.)?cal\.com\//, "")
-  .replace(/^cal\.com\//, "");
+// Cal.com root namespace for inline embedding.
+// The widget will load available event types at the root URL.
+const CALCOM_NAMESPACE = "hoophouse";
+
+// Fallback URL for direct link button
+const CALCOM_URL = "https://cal.com/hoophouse";
 
 export default function BookingEmbed() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -66,7 +66,7 @@ export default function BookingEmbed() {
       {/* The data-cal-link attribute is what Cal.com's script looks for */}
       <div
         ref={containerRef}
-        data-cal-link={calLinkPath}
+        data-cal-link={CALCOM_NAMESPACE}
         data-cal-config='{"layout":"month_view","theme":"light"}'
         className="min-h-[600px] w-full rounded-2xl border border-brand-gray-border bg-white p-4"
       >
@@ -94,7 +94,7 @@ export default function BookingEmbed() {
       {/* ---- Fallback: direct link button ---- */}
       <div className="mt-6 text-center">
         <a
-          href={SITE.calcomLink}
+          href={CALCOM_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-cta"

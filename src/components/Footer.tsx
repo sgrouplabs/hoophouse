@@ -62,7 +62,9 @@ export default function Footer() {
             <ul className="space-y-1 text-sm text-white/70">
               <li>
                 <Link
-                  href="/booking"
+                  href={SITE.calcomLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="transition-colors hover:text-white"
                 >
                   Book a Court

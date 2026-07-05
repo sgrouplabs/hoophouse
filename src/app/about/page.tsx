@@ -240,7 +240,12 @@ export default function AboutPage() {
             >
               Donate on GoFundMe →
             </Link>
-            <Link href="/booking" className="btn-outline inline-flex text-brand-black">
+            <Link
+              href={SITE.calcomLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline inline-flex text-brand-black"
+            >
               Book a Court
             </Link>
           </div>
@@ -257,7 +262,12 @@ export default function AboutPage() {
             Book your session in under 60 seconds. No calls, no waiting — just
             you and the court.
           </p>
-          <Link href="/booking" className="btn-cta inline-flex">
+          <Link
+            href={SITE.calcomLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-cta inline-flex"
+          >
             Book a Court Now
           </Link>
         </div>

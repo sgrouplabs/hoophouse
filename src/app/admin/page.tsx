@@ -287,7 +287,12 @@ export default function AdminDashboardPage() {
             Quick Actions
           </h3>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            <Link href="/booking" className="card text-center transition-colors hover:border-brand-orange">
+            <Link
+              href={SITE.calcomLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card text-center transition-colors hover:border-brand-orange"
+            >
               <p className="font-medium text-brand-black">View Booking Page</p>
               <p className="mt-1 text-xs text-brand-gray-mid">See what customers see</p>
             </Link>

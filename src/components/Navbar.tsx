@@ -36,7 +36,13 @@ export default function Navbar() {
         <div className="hidden items-center gap-8 md:flex">
           {NAV_LINKS.map((link) =>
             "cta" in link ? (
-              <Link key={link.href} href={link.href} className="btn-cta">
+              <Link
+                key={link.href}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-cta"
+              >
                 {link.label}
               </Link>
             ) : (
@@ -97,6 +103,8 @@ export default function Navbar() {
                     ? "btn-cta w-full"
                     : "text-base font-medium text-brand-black hover:text-brand-orange"
                 }
+                target={"cta" in link ? "_blank" : undefined}
+                rel={"cta" in link ? "noopener noreferrer" : undefined}
               >
                 {link.label}
               </Link>

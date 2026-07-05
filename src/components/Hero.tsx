@@ -13,6 +13,7 @@
  */
 
 import Link from "next/link";
+import { SITE } from "@/lib/data";
 
 export default function Hero() {
   return (
@@ -33,7 +34,12 @@ export default function Hero() {
 
           {/* CTA */}
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <Link href="/booking" className="btn-cta text-lg">
+            <Link
+              href={SITE.calcomLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-cta text-lg"
+            >
               Book Court
             </Link>
             <Link

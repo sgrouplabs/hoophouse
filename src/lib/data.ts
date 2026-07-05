@@ -35,12 +35,12 @@ export const SITE = {
   email: "book@hoophouse502.com",
 
   /**
-   * Cal.com scheduling link.
-   * Replace `hoophouse502` with your actual Cal.com username once the
+   * Cal.com scheduling link (root namespace).
+   * Replace `hoophouse` with your actual Cal.com username once the
    * account is created.
    * @see https://cal.com  →  Sign up  →  Copy your event link
    */
-  calcomLink: "https://cal.com/hoophouse502/court-rental",
+  calcomLink: "https://cal.com/hoophouse",
 
   /** Instagram handle (used for social link in footer). */
   instagram: "https://www.instagram.com/hoophouse502?igsh=d2ZnYzU5ZG9zYzV3",
@@ -64,7 +64,7 @@ export const NAV_LINKS = [
   { label: "About", href: "/about" },
   { label: "How It Works", href: "/#how-it-works" },
   { label: "Pricing", href: "/#pricing" },
-  { label: "Book Court", href: "/booking", cta: true },
+  { label: "Book Court", href: "https://cal.com/hoophouse", cta: true },
 ] as const;
 
 // -----------------------------------------------------------------------------

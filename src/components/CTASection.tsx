@@ -11,6 +11,7 @@
  */
 
 import Link from "next/link";
+import { SITE } from "@/lib/data";
 
 export default function CTASection() {
   return (
@@ -25,7 +26,9 @@ export default function CTASection() {
         </p>
         <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <Link
-            href="/booking"
+            href={SITE.calcomLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-lg font-bold text-brand-orange transition-all hover:bg-brand-orange-light"
           >
             Book Court
