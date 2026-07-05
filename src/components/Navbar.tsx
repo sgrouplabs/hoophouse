@@ -23,13 +23,13 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-brand-gray-border bg-white">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
-        {/* ---- Logo (text-based, flat) ---- */}
-        <Link
-          href="/"
-          className="text-xl font-bold tracking-tight text-brand-black"
-          aria-label={SITE.name}
-        >
-          {SITE.name}
+        {/* ---- Logo (image) ---- */}
+        <Link href="/" aria-label={SITE.name}>
+          <img
+            src="/logo.png"
+            alt={SITE.name}
+            className="h-10 w-auto"
+          />
         </Link>
 
         {/* ---- Desktop Nav Links ---- */}
