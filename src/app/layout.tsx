@@ -70,14 +70,25 @@ export default function RootLayout({
       </head>
 
       <body className="min-h-full flex flex-col bg-white">
-        {/* GoFundMe Donation Banner — Full-width animated ticker at very top */}
-        <div className="donation-banner" role="region" aria-label="Donation announcement">
-          <div className="donation-banner__track" aria-hidden="true">
+        {/* GoFundMe Donation Banner — black bg, orange text, animated ticker */}
+        <div
+          className="flex w-full items-center justify-center overflow-hidden bg-black py-2.5 text-center text-sm text-[#ffa500] sm:text-base"
+          role="region"
+          aria-label="Donation announcement"
+        >
+          <div
+            className="inline-block"
+            aria-hidden="true"
+            style={{
+              animation: 'marquee-scroll 20s linear infinite',
+              paddingLeft: '100%',
+            }}
+          >
             <a
               href="https://gofund.me/8072dffdc"
               target="_blank"
               rel="noopener noreferrer"
-              className="donation-banner__link"
+              className="font-semibold text-[#ffa500] underline decoration-2 underline-offset-2 transition-opacity hover:opacity-80"
             >
               We are accepting donations. Click here to donate to our GoFundMe!
             </a>

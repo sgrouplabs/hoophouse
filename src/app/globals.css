@@ -107,10 +107,7 @@ html {
   }
 }
 
-/* ----------------------------------------------------------------------------
- * GoFundMe Donation Banner — Full-width animated ticker
- * ---------------------------------------------------------------------------- */
-
+/* GoFundMe marquee animation — used by inline style on the banner */
 @keyframes marquee-scroll {
   0% {
     transform: translateX(100%);
@@ -120,49 +117,9 @@ html {
   }
 }
 
-.donation-banner {
-  background: #000000;
-  color: var(--color-gofundme-orange);
-  padding: 10px 0;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.donation-banner__track {
-  display: inline-block;
-  animation: marquee-scroll 20s linear infinite;
-  padding-left: 100%;
-}
-
-.donation-banner__link {
-  color: var(--color-gofundme-orange);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: opacity 0.2s ease;
-}
-
-.donation-banner__link:hover {
-  opacity: 0.8;
-}
-
-.donation-banner__link:focus-visible {
-  outline: 2px solid var(--color-gofundme-orange);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Pause animation on hover for better UX */
-.donation-banner:hover .donation-banner__track {
-  animation-play-state: paused;
-}
-
-/* Reduced motion support */
+/* Reduced motion support for GoFundMe banner */
 @media (prefers-reduced-motion: reduce) {
-  .donation-banner__track {
-    animation: none;
-    padding-left: 0;
+  [style*="animation"] {
+    animation: none !important;
   }
 }
