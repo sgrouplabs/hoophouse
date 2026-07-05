@@ -29,7 +29,7 @@ export default function SchedulingSection() {
     /* ---- Cal.com IIFE — creates the Cal namespace & queues the inline call ---- */
     const setupCal = () => {
       (function (C, A, L) {
-        let p = function (a: any, ar: any[]) { a.q.push(ar); };
+        let p = function (a: any, ar: any) { a.q.push(ar); };
         let d = C.document;
         C.Cal =
           C.Cal ||
