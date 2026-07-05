@@ -121,7 +121,7 @@ html {
 }
 
 .donation-banner {
-  background: var(--color-black);
+  background: #000000;
   color: var(--color-gofundme-orange);
   padding: 10px 0;
   overflow: hidden;

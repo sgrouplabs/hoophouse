@@ -26,7 +26,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ADMIN_CONFIG, MOCK_DASHBOARD_DATA, SITE } from "@/lib/data";
+import { isAuthenticated, logout } from "@/lib/auth";
+import { MOCK_DASHBOARD_DATA, SITE } from "@/lib/data";
 
 // --- Stat Card Component ---------------------------------------------------
 
@@ -109,12 +110,11 @@ export default function AdminDashboardPage() {
   const [authenticated, setAuthenticated] = useState(false);
   const [checking, setChecking] = useState(true);
 
-  // Check authentication on mount
+  // Check authentication on mount — redirect to /login if not authenticated
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const session = sessionStorage.getItem(ADMIN_CONFIG.sessionKey);
-      if (session !== "authenticated") {
-        router.replace("/admin/login");
+      if (!isAuthenticated()) {
+        router.replace("/login");
         return;
       }
       setAuthenticated(true);
@@ -125,8 +125,8 @@ export default function AdminDashboardPage() {
   // --- Logout handler ---
 
   const handleLogout = () => {
-    sessionStorage.removeItem(ADMIN_CONFIG.sessionKey);
-    router.push("/admin/login");
+    logout();
+    router.push("/login");
   };
 
   // Show nothing while checking auth / redirecting
