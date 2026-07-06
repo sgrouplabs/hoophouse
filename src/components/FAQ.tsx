@@ -94,7 +94,7 @@ function FAQRow({
           {item.keywords.map((kw) => (
             <span
               key={kw}
-              className="inline-block rounded-full bg-brand-gray-dark px-2.5 py-0.5 text-xs text-brand-gray-mid"
+              className="inline-block rounded-full bg-black px-2.5 py-0.5 text-xs text-white/40"
             >
               {kw}
             </span>
@@ -138,13 +138,13 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="section-padding bg-brand-gray-dark">
+    <section id="faq" className="section-padding bg-black">
       <div className="mx-auto max-w-4xl">
         {/* ---- Section header ---- */}
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold text-white md:text-4xl">
             Frequently Asked{" "}
-            <span className="text-brand-gold">Questions</span>
+            <span className="text-[#F2C311]">Questions</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/70">
             Ask it like you&apos;d say it — we&apos;ve got you covered.
@@ -154,7 +154,7 @@ export default function FAQ() {
         {/* ---- Two-column layout: FAQ + Links ---- */}
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Left: FAQ Accordion */}
-          <div className="rounded-2xl border border-brand-gray-border bg-brand-gray-dark px-6">
+          <div className="rounded-2xl border border-gray-400 bg-black px-6">
             {AEO_FAQ_ITEMS.map((item) => (
               <FAQRow
                 key={item.id}

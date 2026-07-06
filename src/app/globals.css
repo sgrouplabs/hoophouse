@@ -100,7 +100,7 @@ html {
   }
 
   .card {
-    @apply rounded-2xl border border-brand-gray-border bg-brand-gray-dark p-6 transition-shadow duration-200 hover:shadow-md;
+    @apply rounded-2xl border border-gray-400 bg-black p-6 transition-shadow duration-200 hover:shadow-md;
   }
 
   .section-padding {
