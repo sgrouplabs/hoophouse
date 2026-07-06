@@ -37,7 +37,7 @@ function StatCard({ label, value, sublabel }: { label: string; value: string; su
       <p className="text-xs font-semibold uppercase tracking-wide text-brand-gray-mid">
         {label}
       </p>
-      <p className="mt-2 text-3xl font-extrabold text-brand-black">
+      <p className="mt-2 text-3xl font-extrabold text-white">
         {value}
       </p>
       {sublabel && (
@@ -71,7 +71,7 @@ function RevenueChart() {
 
   return (
     <div className="card">
-      <h3 className="mb-6 text-lg font-bold text-brand-black">
+      <h3 className="mb-6 text-lg font-bold text-white">
         Revenue This Week
       </h3>
       <div className="flex items-end justify-between gap-3" style={{ height: "200px" }}>
@@ -82,7 +82,7 @@ function RevenueChart() {
               {/* Bar */}
               <div className="flex w-full flex-1 items-end">
                 <div
-                  className="w-full rounded-t-lg bg-brand-orange transition-all duration-500 hover:bg-brand-orange-dark"
+                  className="w-full rounded-t-lg bg-brand-gold transition-all duration-500 hover:bg-brand-gold-dark"
                   style={{ height: `${heightPercent}%` }}
                   title={`$${d.revenue}`}
                 />
@@ -92,7 +92,7 @@ function RevenueChart() {
                 {d.day}
               </span>
               {/* Revenue label */}
-              <span className="text-xs font-semibold text-brand-black">
+              <span className="text-xs font-semibold text-white">
                 ${d.revenue}
               </span>
             </div>
@@ -132,10 +132,10 @@ export default function AdminDashboardPage() {
   // Show nothing while checking auth / redirecting
   if (checking || !authenticated) {
     return (
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-brand-black">
         <div className="mx-auto max-w-md text-center">
           <div className="flex justify-center">
-            <svg className="h-8 w-8 animate-spin text-brand-orange" fill="none" viewBox="0 0 24 24">
+            <svg className="h-8 w-8 animate-spin text-brand-gold" fill="none" viewBox="0 0 24 24">
               <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
               <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
             </svg>
@@ -149,12 +149,12 @@ export default function AdminDashboardPage() {
   const { stats, recentBookings } = MOCK_DASHBOARD_DATA;
 
   return (
-    <section className="section-padding bg-brand-gray-light">
+    <section className="section-padding bg-brand-gray-dark">
       <div className="mx-auto max-w-7xl">
         {/* ---- Header ---- */}
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold text-brand-black">
+            <h1 className="text-2xl font-bold text-white">
               Dashboard
             </h1>
             <p className="mt-1 text-sm text-brand-gray-mid">
@@ -164,7 +164,7 @@ export default function AdminDashboardPage() {
           <div className="flex items-center gap-4">
             <Link
               href="/"
-              className="text-sm font-medium text-brand-black hover:text-brand-orange"
+              className="text-sm font-medium text-white hover:text-brand-gold"
             >
               View Site
             </Link>
@@ -209,7 +209,7 @@ export default function AdminDashboardPage() {
           {/* Recent Bookings Table */}
           <div className="card">
             <div className="mb-4 flex items-center justify-between">
-              <h3 className="text-lg font-bold text-brand-black">
+              <h3 className="text-lg font-bold text-white">
                 Recent Bookings
               </h3>
               <span className="text-xs text-brand-gray-mid">
@@ -246,7 +246,7 @@ export default function AdminDashboardPage() {
                       className="border-b border-brand-gray-border last:border-0"
                     >
                       <td className="py-3 pr-4">
-                        <div className="font-medium text-brand-black">
+                        <div className="font-medium text-white">
                           {booking.customer}
                         </div>
                         <div className="text-xs text-brand-gray-mid">
@@ -260,7 +260,7 @@ export default function AdminDashboardPage() {
                         {booking.date}
                         <div className="text-xs">{booking.time}</div>
                       </td>
-                      <td className="py-3 pr-4 font-semibold text-brand-black">
+                      <td className="py-3 pr-4 font-semibold text-white">
                         ${booking.price}
                       </td>
                       <td className="py-3">
@@ -274,7 +274,7 @@ export default function AdminDashboardPage() {
 
             {/* View all link (placeholder) */}
             <div className="mt-4 text-center">
-              <button className="text-sm font-medium text-brand-orange hover:underline">
+              <button className="text-sm font-medium text-brand-gold hover:underline">
                 View all bookings &rarr;
               </button>
             </div>
@@ -283,7 +283,7 @@ export default function AdminDashboardPage() {
 
         {/* ---- Quick Actions ---- */}
         <div className="mt-8">
-          <h3 className="mb-4 text-lg font-bold text-brand-black">
+          <h3 className="mb-4 text-lg font-bold text-white">
             Quick Actions
           </h3>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -291,29 +291,29 @@ export default function AdminDashboardPage() {
               href={SITE.calcomLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="card text-center transition-colors hover:border-brand-orange"
+              className="card text-center transition-colors hover:border-brand-gold"
             >
-              <p className="font-medium text-brand-black">View Booking Page</p>
+              <p className="font-medium text-white">View Booking Page</p>
               <p className="mt-1 text-xs text-brand-gray-mid">See what customers see</p>
             </Link>
-            <Link href="/waiver" className="card text-center transition-colors hover:border-brand-orange">
-              <p className="font-medium text-brand-black">View Waiver</p>
+            <Link href="/waiver" className="card text-center transition-colors hover:border-brand-gold">
+              <p className="font-medium text-white">View Waiver</p>
               <p className="mt-1 text-xs text-brand-gray-mid">Review liability terms</p>
             </Link>
-            <Link href="/#pricing" className="card text-center transition-colors hover:border-brand-orange">
-              <p className="font-medium text-brand-black">Edit Pricing</p>
+            <Link href="/#pricing" className="card text-center transition-colors hover:border-brand-gold">
+              <p className="font-medium text-white">Edit Pricing</p>
               <p className="mt-1 text-xs text-brand-gray-mid">Update court rates</p>
             </Link>
-            <Link href="/privacy" className="card text-center transition-colors hover:border-brand-orange">
-              <p className="font-medium text-brand-black">View Privacy Policy</p>
+            <Link href="/privacy" className="card text-center transition-colors hover:border-brand-gold">
+              <p className="font-medium text-white">View Privacy Policy</p>
               <p className="mt-1 text-xs text-brand-gray-mid">Review data policy</p>
             </Link>
           </div>
         </div>
 
         {/* ---- Development Notice ---- */}
-        <div className="mt-8 rounded-2xl border border-brand-orange bg-brand-orange-light p-4">
-          <p className="text-sm text-brand-black">
+        <div className="mt-8 rounded-2xl border border-brand-gold bg-brand-gold-light p-4">
+          <p className="text-sm text-white">
             <strong className="font-semibold">Development Mode:</strong> This
             dashboard uses mock data and client-side authentication. When the
             database is connected, replace sessionStorage auth with a proper

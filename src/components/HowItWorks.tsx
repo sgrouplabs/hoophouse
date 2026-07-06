@@ -3,12 +3,12 @@
  * How It Works (Server Component)
  * ============================================================================
  *
- * 3-column flat-design grid outlining the automated process:
+ * 3-column flat-design grid outlining the booking process:
  *   1. Book Online  (calendar icon)
- *   2. Get Your Code (lock icon)
- *   3. Play (user icon)
+ *   2. Get Confirmation (mail icon)
+ *   3. Arrive & Play (user icon)
  *
- * Uses inline SVG flat icons in black/orange — no emojis, no basketball
+ * Uses inline SVG flat icons in white/gold — no emojis, no basketball
  * imagery. Data comes from the HOW_IT_WORKS array in @/lib/data.
  * ============================================================================
  */
@@ -28,10 +28,10 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
         <path d="M16 2v4M8 2v4M3 10h18" strokeWidth={1.5} />
       </>
     ),
-    lock: (
+    mail: (
       <>
-        <rect x="5" y="11" width="14" height="10" rx="2" strokeWidth={1.5} />
-        <path d="M8 11V7a4 4 0 018 0v4" strokeWidth={1.5} />
+        <rect x="2" y="4" width="20" height="16" rx="2" strokeWidth={1.5} />
+        <path d="M2 4l10 8 10-8" strokeWidth={1.5} />
       </>
     ),
     user: (
@@ -44,7 +44,7 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
   return (
     <svg
-      className="h-10 w-10 text-brand-black"
+      className="h-10 w-10 text-white"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -56,12 +56,12 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-white">
+    <section id="how-it-works" className="section-padding bg-brand-black">
       <div className="mx-auto max-w-7xl">
         {/* ---- Section header ---- */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-brand-black md:text-4xl">
-            How It <span className="text-brand-orange">Works</span>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            How It <span className="text-brand-gold">Works</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-brand-gray-mid">
             Three simple steps. No phone calls, no front desk, no waiting.
@@ -73,7 +73,7 @@ export default function HowItWorks() {
           {HOW_IT_WORKS.map((step) => (
             <div key={step.id} className="text-center">
               {/* Step number badge */}
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand-orange text-xl font-bold text-brand-orange">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand-gold text-xl font-bold text-brand-gold">
                 {step.step}
               </div>
 
@@ -83,7 +83,7 @@ export default function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3 className="mb-2 text-lg font-semibold text-brand-black">
+              <h3 className="mb-2 text-lg font-semibold text-white">
                 {step.title}
               </h3>
 

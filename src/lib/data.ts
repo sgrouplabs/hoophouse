@@ -9,8 +9,8 @@
  *
  * Design rules enforced across the app:
  *   - No basketball imagery, emojis, or court vectors
- *   - Pure white background, black text, orange accents
- *   - Inter font, flat design, ultra-minimalist
+ *   - Deep black background, white text, gold accents
+ *   - Anton headings, Epilogue body, flat design, ultra-minimalist
  * ============================================================================ */
 
 // -----------------------------------------------------------------------------
@@ -81,7 +81,7 @@ export interface HowItWorksStep {
   /** Description copy. */
   description: string;
   /** Icon key — maps to inline SVG in the component. */
-  icon: "calendar" | "lock" | "user";
+  icon: "calendar" | "mail" | "user";
 }
 
 export const HOW_IT_WORKS: HowItWorksStep[] = [
@@ -90,23 +90,23 @@ export const HOW_IT_WORKS: HowItWorksStep[] = [
     step: 1,
     title: "Book Online",
     description:
-      "Pick your date and time slot from the calendar. Reservation confirmed instantly — no calls, no waiting.",
+      "Choose your date, time slot, and court type. Pay securely online — no calls needed.",
     icon: "calendar",
   },
   {
-    id: "get-your-code",
+    id: "get-confirmation",
     step: 2,
-    title: "Get Your Code",
+    title: "Get Confirmation",
     description:
-      "Receive a unique access code via email instantly after booking. Use it at the door to unlock the facility.",
-    icon: "lock",
+      "Receive your booking receipt via email instantly. Save it for easy check-in.",
+    icon: "mail",
   },
   {
     id: "play",
     step: 3,
-    title: "Play",
+    title: "Arrive & Play",
     description:
-      "Show up, enter your code, and the court is yours. 24/7 self-service access means you play on your schedule.",
+      "Show your confirmation at the door and start playing. Courts are yours on your schedule.",
     icon: "user",
   },
 ];

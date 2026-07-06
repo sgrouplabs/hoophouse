@@ -25,12 +25,12 @@ export const metadata: Metadata = {
 
 export default function CheckoutPage() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-black">
       <div className="mx-auto max-w-4xl">
         {/* ---- Header ---- */}
         <div className="mb-8 text-center">
-          <h1 className="text-3xl font-bold text-brand-black md:text-4xl">
-            Reserve &amp; <span className="text-brand-orange">Pay</span>
+          <h1 className="text-3xl font-bold text-white md:text-4xl">
+            Reserve &amp; <span className="text-brand-gold">Pay</span>
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-brand-gray-mid">
             Select your court, pick your time, and confirm your reservation.

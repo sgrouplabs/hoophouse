@@ -69,7 +69,7 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="min-h-full flex flex-col bg-white">
+      <body className="min-h-full flex flex-col bg-brand-black">
         {/* GoFundMe Donation Banner — black bg, orange text, static */}
         <div
           className="flex w-full items-center justify-center bg-black py-2.5"

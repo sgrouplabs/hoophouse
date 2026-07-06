@@ -5,13 +5,12 @@
  * Navbar (Client Component)
  * ============================================================================
  *
- * Minimalist header: text logo on the left, "Book Court" orange CTA on the
+ * Minimalist header: text logo on the left, "Book Court" gold CTA on the
  * right. Mobile menu uses a hamburger toggle (requires "use client").
  *
- * DESIGN RULES: No basketball imagery. Flat white background, black text,
- * orange accent on the CTA button only.
- * ============================================================================
- */
+ * DESIGN RULES: No basketball imagery. Flat black background, white text,
+ * gold accent on the CTA button only.
+ * ============================================================================ */
 
 import Link from "next/link";
 import { useState } from "react";
@@ -21,7 +20,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-brand-gray-border bg-white">
+    <header className="sticky top-0 z-50 border-b border-brand-gray-border bg-brand-black">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
         {/* ---- Logo (image) ---- */}
         <Link href="/" aria-label={SITE.name}>
@@ -49,7 +48,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-brand-black transition-colors hover:text-brand-orange"
+                className="text-sm font-medium text-white transition-colors hover:text-brand-gold"
               >
                 {link.label}
               </Link>
@@ -65,7 +64,7 @@ export default function Navbar() {
           aria-expanded={mobileOpen}
         >
           <svg
-            className="h-7 w-7 text-brand-black"
+            className="h-7 w-7 text-white"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -91,7 +90,7 @@ export default function Navbar() {
 
       {/* ---- Mobile Menu Drawer ---- */}
       {mobileOpen && (
-        <div className="border-t border-brand-gray-border bg-white px-6 py-4 md:hidden">
+        <div className="border-t border-brand-gray-border bg-brand-black px-6 py-4 md:hidden">
           <div className="flex flex-col gap-4">
             {NAV_LINKS.map((link) => (
               <Link
@@ -101,7 +100,7 @@ export default function Navbar() {
                 className={
                   "cta" in link
                     ? "btn-cta w-full"
-                    : "text-base font-medium text-brand-black hover:text-brand-orange"
+                    : "text-base font-medium text-white hover:text-brand-gold"
                 }
                 target={"cta" in link ? "_blank" : undefined}
                 rel={"cta" in link ? "noopener noreferrer" : undefined}

@@ -6,8 +6,8 @@
  * Full-width section on the landing page with three buttons that open Cal.com
  * modal popups for different court rental types.
  *
- * DESIGN RULES: Flat white background, minimalist header, no basketball
- * imagery. Solid brand-orange buttons with hover states.
+ * DESIGN RULES: Flat black background, minimalist header, no basketball
+ * imagery. Solid brand-gold buttons with hover states.
  * ============================================================================ */
 
 /*
@@ -69,12 +69,12 @@ export default function SchedulingSection() {
   }, []);
 
   return (
-    <section id="scheduling" className="section-padding bg-brand-gray-light">
+    <section id="scheduling" className="section-padding bg-brand-gray-dark">
       <div className="mx-auto max-w-4xl">
         {/* ---- Section header ---- */}
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-brand-black md:text-4xl">
-            Book Your <span className="text-brand-orange">Court</span>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            Book Your <span className="text-brand-gold">Court</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-brand-gray-mid">
             Choose a booking type below. A calendar will open so you can

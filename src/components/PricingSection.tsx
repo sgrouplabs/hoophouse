@@ -4,25 +4,24 @@
  * ============================================================================
  *
  * Displays the rental pricing tiers in a responsive card layout.
- * The "popular" tier gets an orange highlight border and badge.
+ * The "popular" tier gets a gold highlight border and badge.
  * Each tier has a "Book This" button that links to /booking.
  *
- * DESIGN RULES: Flat design, no emojis. White cards on light gray
- * background, orange accents on the popular tier.
- * ============================================================================
- */
+ * DESIGN RULES: Flat design, no emojis. Dark cards on dark gray
+ * background, gold accents on the popular tier.
+ * ============================================================================ */
 
 import Link from "next/link";
 import { SITE, PRICING_TIERS } from "@/lib/data";
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="section-padding bg-white">
+    <section id="pricing" className="section-padding bg-brand-black">
       <div className="mx-auto max-w-7xl">
         {/* ---- Header ---- */}
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-brand-black md:text-4xl">
-            Simple, hourly <span className="text-brand-orange">pricing</span>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            Simple, hourly <span className="text-brand-gold">pricing</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-brand-gray-mid">
             No memberships. No hidden fees. Just book the time you need and
@@ -37,25 +36,25 @@ export default function PricingSection() {
               key={tier.id}
               className={`card relative ${
                 tier.popular
-                  ? "border-2 border-brand-orange"
+                  ? "border-2 border-brand-gold"
                   : ""
               }`}
             >
               {/* Popular badge */}
               {tier.popular && (
-                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-orange px-4 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-4 py-1 text-xs font-bold uppercase tracking-wide text-black">
                   Most Popular
                 </span>
               )}
 
               {/* Tier name */}
-              <h3 className="text-lg font-bold text-brand-black">
+              <h3 className="text-lg font-bold text-white">
                 {tier.name}
               </h3>
 
               {/* Price */}
               <div className="mt-2 flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold text-brand-black">
+                <span className="text-4xl font-extrabold text-white">
                   {tier.priceLabel}
                 </span>
                 <span className="text-sm text-brand-gray-mid">
@@ -68,11 +67,11 @@ export default function PricingSection() {
                 {tier.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-center gap-2 text-sm text-brand-black"
+                    className="flex items-center gap-2 text-sm text-white"
                   >
                     {/* Flat checkmark icon */}
                     <svg
-                      className="h-4 w-4 flex-shrink-0 text-brand-orange"
+                      className="h-4 w-4 flex-shrink-0 text-brand-gold"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -111,7 +110,7 @@ export default function PricingSection() {
             href={SITE.calcomLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-brand-orange hover:underline"
+            className="font-semibold text-brand-gold hover:underline"
           >
             Contact us for bulk discounts
           </Link>

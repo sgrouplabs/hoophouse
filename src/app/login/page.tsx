@@ -10,7 +10,7 @@
  * Responsive, centered login form for admin access. Uses the auth() utility
  * from @/lib/auth for credential submission. On success, redirects to /admin.
  *
- * DESIGN RULES: Flat design, white background, black text, orange accents.
+ * DESIGN RULES: Flat design, black background, white text, gold accents.
  * Centered card layout matching the rest of the site.
  * ============================================================================ */
 
@@ -58,12 +58,12 @@ export default function LoginPage() {
   };
 
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-black">
       <div className="mx-auto max-w-md">
         {/* ---- Header ---- */}
         <div className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-brand-black">
-            Admin <span className="text-brand-orange">Login</span>
+          <h1 className="text-2xl font-bold text-white">
+            Admin <span className="text-brand-gold">Login</span>
           </h1>
           <p className="mt-2 text-sm text-brand-gray-mid">
             {SITE.name} staff access only.
@@ -77,7 +77,7 @@ export default function LoginPage() {
             <div>
               <label
                 htmlFor="login-email"
-                className="mb-1 block text-sm font-medium text-brand-black"
+                className="mb-1 block text-sm font-medium text-white"
               >
                 Email
               </label>
@@ -89,7 +89,7 @@ export default function LoginPage() {
                 placeholder="admin@hoophouse502.com"
                 autoComplete="email"
                 disabled={loading}
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
 
@@ -97,7 +97,7 @@ export default function LoginPage() {
             <div>
               <label
                 htmlFor="login-password"
-                className="mb-1 block text-sm font-medium text-brand-black"
+                className="mb-1 block text-sm font-medium text-white"
               >
                 Password
               </label>
@@ -109,7 +109,7 @@ export default function LoginPage() {
                 placeholder="••••••••"
                 autoComplete="current-password"
                 disabled={loading}
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20 disabled:cursor-not-allowed disabled:opacity-50"
               />
             </div>
 
@@ -169,7 +169,7 @@ export default function LoginPage() {
           </form>
 
           {/* --- Development notice --- */}
-          <div className="mt-6 rounded-xl bg-brand-orange-light p-3 text-center text-xs text-brand-orange-dark">
+          <div className="mt-6 rounded-xl bg-brand-gold-light p-3 text-center text-xs text-brand-gold">
             <strong>Development Mode:</strong> Auth is a client-side stub.
             Replace with a real API call in src/lib/auth.ts before going live.
           </div>
@@ -177,7 +177,7 @@ export default function LoginPage() {
 
         {/* --- Back to site --- */}
         <p className="mt-6 text-center text-sm text-brand-gray-mid">
-          <Link href="/" className="text-brand-orange hover:underline">
+          <Link href="/" className="text-brand-gold hover:underline">
             &larr; Back to site
           </Link>
         </p>

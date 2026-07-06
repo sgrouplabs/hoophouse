@@ -117,13 +117,13 @@ export default function CheckoutForm({
               />
             </svg>
           </div>
-          <h2 className="mt-4 text-2xl font-bold text-brand-black">
+          <h2 className="mt-4 text-2xl font-bold text-white">
             Booking Confirmed!
           </h2>
           <p className="mt-2 text-brand-gray-mid">
             Thanks, {name.split(" ")[0]}! Your court rental is reserved.
           </p>
-          <div className="mt-6 rounded-xl bg-white p-4 text-left text-sm">
+          <div className="mt-6 rounded-xl bg-brand-gray-dark p-4 text-left text-sm">
             <div className="flex justify-between border-b border-brand-gray-border pb-2">
               <span className="text-brand-gray-mid">Court:</span>
               <span className="font-semibold">{tier.name}</span>
@@ -138,7 +138,7 @@ export default function CheckoutForm({
             </div>
             <div className="flex justify-between pt-2">
               <span className="text-brand-gray-mid">Total Paid:</span>
-              <span className="font-bold text-brand-orange">
+              <span className="font-bold text-brand-gold">
                 {tier.priceLabel}
               </span>
             </div>
@@ -148,7 +148,7 @@ export default function CheckoutForm({
           </p>
           <p className="mt-2 text-xs text-brand-gray-mid">
             Questions? Call us at{" "}
-            <a href={SITE.phoneHref} className="text-brand-orange">
+            <a href={SITE.phoneHref} className="text-brand-gold">
               {SITE.phoneDisplay}
             </a>
           </p>
@@ -177,20 +177,20 @@ export default function CheckoutForm({
       <div className="grid gap-8 md:grid-cols-5">
         {/* ---- Left: Form fields (3 cols) ---- */}
         <div className="md:col-span-3">
-          <h2 className="mb-6 text-2xl font-bold text-brand-black">
+          <h2 className="mb-6 text-2xl font-bold text-white">
             Your Information
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             {/* --- Court selection --- */}
             <div>
-              <label className="mb-1 block text-sm font-medium text-brand-black">
+              <label className="mb-1 block text-sm font-medium text-white">
                 Court / Time Slot
               </label>
               <select
                 value={selectedTier}
                 onChange={(e) => setSelectedTier(e.target.value)}
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
               >
                 {PRICING_TIERS.map((t) => (
                   <option key={t.id} value={t.id}>
@@ -202,33 +202,33 @@ export default function CheckoutForm({
 
             {/* --- Date --- */}
             <div>
-              <label className="mb-1 block text-sm font-medium text-brand-black">
+              <label className="mb-1 block text-sm font-medium text-white">
                 Preferred Date
               </label>
               <input
                 type="date"
                 value={bookingDate}
                 onChange={(e) => setBookingDate(e.target.value)}
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
               />
             </div>
 
             {/* --- Time --- */}
             <div>
-              <label className="mb-1 block text-sm font-medium text-brand-black">
+              <label className="mb-1 block text-sm font-medium text-white">
                 Preferred Time
               </label>
               <input
                 type="time"
                 value={bookingTime}
                 onChange={(e) => setBookingTime(e.target.value)}
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
               />
             </div>
 
             {/* --- Name --- */}
             <div>
-              <label className="mb-1 block text-sm font-medium text-brand-black">
+              <label className="mb-1 block text-sm font-medium text-white">
                 Full Name
               </label>
               <input
@@ -236,13 +236,13 @@ export default function CheckoutForm({
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="John Doe"
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
               />
             </div>
 
             {/* --- Email --- */}
             <div>
-              <label className="mb-1 block text-sm font-medium text-brand-black">
+              <label className="mb-1 block text-sm font-medium text-white">
                 Email Address
               </label>
               <input
@@ -250,13 +250,13 @@ export default function CheckoutForm({
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="john@example.com"
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
               />
             </div>
 
             {/* --- Phone --- */}
             <div>
-              <label className="mb-1 block text-sm font-medium text-brand-black">
+              <label className="mb-1 block text-sm font-medium text-white">
                 Phone Number
               </label>
               <input
@@ -264,7 +264,7 @@ export default function CheckoutForm({
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 placeholder="502-550-6954"
-                className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+                className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
               />
             </div>
 
@@ -334,8 +334,8 @@ export default function CheckoutForm({
 
         {/* ---- Right: Order summary (2 cols) ---- */}
         <div className="md:col-span-2">
-          <div className="card sticky top-24 bg-brand-gray-light">
-            <h3 className="mb-4 text-lg font-bold text-brand-black">
+          <div className="card sticky top-24 bg-brand-gray-dark">
+            <h3 className="mb-4 text-lg font-bold text-white">
               Order Summary
             </h3>
 
@@ -367,10 +367,10 @@ export default function CheckoutForm({
               <p className="mb-2 text-xs font-semibold uppercase text-brand-gray-mid">
                 Included
               </p>
-              <ul className="space-y-1 text-xs text-brand-black">
+              <ul className="space-y-1 text-xs text-white">
                 {tier.features.map((f) => (
                   <li key={f} className="flex items-center gap-1.5">
-                    <span className="text-brand-orange">&check;</span> {f}
+                    <span className="text-brand-gold">&check;</span> {f}
                   </li>
                 ))}
               </ul>
@@ -379,17 +379,17 @@ export default function CheckoutForm({
             {/* Total */}
             <div className="mt-4 border-t border-brand-gray-border pt-4">
               <div className="flex items-baseline justify-between">
-                <span className="text-base font-bold text-brand-black">
+                <span className="text-base font-bold text-white">
                   Total
                 </span>
-                <span className="text-2xl font-extrabold text-brand-orange">
+                <span className="text-2xl font-extrabold text-brand-gold">
                   {tier.priceLabel}
                 </span>
               </div>
             </div>
 
             {/* Location */}
-            <div className="mt-4 rounded-lg bg-white p-3 text-xs text-brand-gray-mid">
+            <div className="mt-4 rounded-lg bg-brand-gray-dark p-3 text-xs text-brand-gray-mid">
               {SITE.address}
             </div>
           </div>

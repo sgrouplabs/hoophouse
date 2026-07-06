@@ -40,11 +40,11 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         (zip 40214). We have a free parking lot directly in front of the facility,
         making it easy to find whether you&apos;re coming from St. Matthews, Portland,
         or anywhere else in the metro.{" "}
-        <a href="/about" className="text-brand-orange hover:underline">
+        <a href="/about" className="text-brand-gold hover:underline">
           Learn more about our story
         </a>{" "}
         and community mission, or{" "}
-        <a href="/" className="text-brand-orange hover:underline">
+        <a href="/" className="text-brand-gold hover:underline">
           book a court session
         </a>{" "}
         today.
@@ -69,14 +69,14 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
           href="https://gofund.me/8072dffdc"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-orange hover:underline"
+                className="text-brand-gold hover:underline"
         >
           gofund.me/8072dffdc
         </a>
         . Every dollar goes directly back into the facility — covering HVAC repairs,
         court resurfacing, and ongoing costs that keep this community space open for
         young people in Louisville. Even small contributions make a real difference.{" "}
-        <a href="/about" className="text-brand-orange hover:underline">
+        <a href="/about" className="text-brand-gold hover:underline">
           Read about our mission
         </a>{" "}
         to learn why this project matters.
@@ -101,7 +101,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         his grandfather. Paul transformed his grandfather&apos;s legacy into a safe,
         24/7 community hub in the Shawnee neighborhood — offering youth basketball,
         tutoring, and mental health support.{" "}
-        <a href="/about" className="text-brand-orange hover:underline">
+        <a href="/about" className="text-brand-gold hover:underline">
           Read the full founder story
         </a>{" "}
         to learn how a family building became a neighborhood cornerstone.
@@ -131,11 +131,11 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         <strong>(3) Mental Health Support</strong> — partnerships with local counselors
         offering sliding-scale sessions. We also host youth tournaments, adult leagues,
         skills clinics, and pickup games.{' '}
-        <a href="/booking" className="text-brand-orange hover:underline">
+        <a href="/booking" className="text-brand-gold hover:underline">
           Book a court now
         </a>{' '}
         or{' '}
-        <a href="/about" className="text-brand-orange hover:underline">
+        <a href="/about" className="text-brand-gold hover:underline">
           learn more about our programs
         </a>
         .
@@ -157,7 +157,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
     answer: (
       <>
         Booking a court at Flaget Hoop House 502 is quick and easy — just visit{' '}
-        <a href="/booking" className="text-brand-orange hover:underline">
+        <a href="/booking" className="text-brand-gold hover:underline">
           our booking page
         </a>
         , pick your date and time, and pay online. Half-court rentals start at{' '}
@@ -208,7 +208,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         sound system. For full-court rentals, a Gatorade cooler is included. We&apos;re
         located at 604 S 44th St with free parking out front, so arrive early to grab a
         spot.{' '}
-        <a href="/booking" className="text-brand-orange hover:underline">
+        <a href="/booking" className="text-brand-gold hover:underline">
           Book your time slot
         </a>{' '}
         and we&apos;ll email you the access code.
@@ -234,7 +234,7 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         engaged through sports, tutoring, and mentorship. Parents feel comfortable
         letting their kids use the facility, and our programming — including free
         tutoring and mental health support — shows we take that trust seriously.{' '}
-        <a href="/about" className="text-brand-orange hover:underline">
+        <a href="/about" className="text-brand-gold hover:underline">
           Read about our community mission
         </a>
         .

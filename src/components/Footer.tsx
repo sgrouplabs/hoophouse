@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="text-center md:text-left">
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-orange">
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-gold">
               Contact
             </h3>
             <ul className="space-y-1 text-sm text-white/70">
@@ -56,7 +56,7 @@ export default function Footer() {
 
           {/* Links */}
           <div className="text-center md:text-left">
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-orange">
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-gold">
               Links
             </h3>
             <ul className="space-y-1 text-sm text-white/70">

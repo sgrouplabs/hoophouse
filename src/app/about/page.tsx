@@ -16,8 +16,8 @@
  *   - Authoritativeness: Named founder, named location, named programs
  *   - Trustworthiness: Clear mission, legacy connection, transparent history
  *
- * Design: Flat white background, Anton headings, Epilogue body,
- * orange accents. Matches the rest of the site.
+ * Design: Flat black background, Anton headings, Epilogue body,
+ * gold accents. Matches the rest of the site.
  * ============================================================================ */
 
 import { Metadata } from "next";
@@ -40,9 +40,9 @@ export default function AboutPage() {
   return (
     <>
       {/* ---- Hero ---- */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-brand-black">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white">
             About Flaget Hoop House 502
           </h1>
           <p className="mt-6 text-lg md:text-xl text-brand-gray-mid">
@@ -54,13 +54,13 @@ export default function AboutPage() {
       </section>
 
       {/* ---- The Inheritance ---- */}
-      <section className="section-padding bg-brand-gray-light">
+      <section className="section-padding bg-brand-gray-dark">
         <article className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10">
+          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
             How It Began
           </h2>
 
-          <div className="space-y-6 text-lg leading-relaxed text-brand-black/80">
+          <div className="space-y-6 text-lg leading-relaxed text-white/80">
             <p>
               With help from family, friends, and the Louisville basketball community,
               Paul began renovating the space — installing a regulation basketball court
@@ -82,9 +82,9 @@ export default function AboutPage() {
       </section>
 
       {/* ---- The Mission ---- */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-brand-black">
         <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10">
+          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
             Our Mission
           </h2>
 
@@ -114,8 +114,8 @@ export default function AboutPage() {
                 className="card text-center p-8 hover:shadow-lg transition-shadow duration-300"
               >
                 <span className="text-4xl mb-4 block">{pillar.icon}</span>
-                <h3 className="text-xl font-semibold mb-3">{pillar.title}</h3>
-                <p className="text-brand-black/70 leading-relaxed">
+                <h3 className="text-xl font-semibold mb-3 text-white">{pillar.title}</h3>
+                <p className="text-white/70 leading-relaxed">
                   {pillar.description}
                 </p>
               </div>
@@ -123,7 +123,7 @@ export default function AboutPage() {
           </div>
 
           <div className="mt-12 text-center max-w-2xl mx-auto">
-            <p className="text-lg text-brand-black/80 leading-relaxed">
+            <p className="text-lg text-white/80 leading-relaxed">
               Flaget Hoop House 502 is not just a basketball court. It's a
               <strong> safe space</strong> for young people in West Louisville — a place
               where they can find mentorship, build confidence, and discover their
@@ -134,24 +134,24 @@ export default function AboutPage() {
       </section>
 
       {/* ---- Paul's Story ---- */}
-      <section className="section-padding bg-brand-gray-light">
+      <section className="section-padding bg-brand-gray-dark">
         <article className="mx-auto max-w-3xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10">
+          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
             The Founder
           </h2>
 
           <div className="card p-8 md:p-12">
-            <blockquote className="space-y-4 text-lg leading-relaxed text-brand-black/80">
+            <blockquote className="space-y-4 text-lg leading-relaxed text-white/80">
               <p>
                 "Young people don't need more restrictions — they need more opportunities. This building was his way of giving back to the neighborhood he loved. When I inherited it, I knew I had to honor that spirit."
               </p>
-              <footer className="text-brand-orange font-semibold">
+              <footer className="text-brand-gold font-semibold">
                 — Paul White, Founder
               </footer>
             </blockquote>
           </div>
 
-          <div className="mt-8 text-center text-brand-black/70">
+          <div className="mt-8 text-center text-white/70">
             <p className="text-base leading-relaxed">
               Paul White is a Louisville native with a deep love for his city and its
               communities. As Founder and Community Director of Flaget Hoop House 502,
@@ -164,9 +164,9 @@ export default function AboutPage() {
       </section>
 
       {/* ---- Facility Highlights ---- */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-brand-black">
         <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10">
+          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
             The Facility
           </h2>
 
@@ -185,10 +185,10 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-4 bg-brand-gray-light rounded-xl border border-brand-gray-border"
+                className="flex items-start gap-4 p-4 bg-brand-gray-dark rounded-xl border border-brand-gray-border"
               >
-                <span className="mt-1 flex-shrink-0 text-brand-orange text-2xl">•</span>
-                <p className="text-brand-black/80 leading-relaxed">{item}</p>
+                <span className="mt-1 flex-shrink-0 text-brand-gold text-2xl">•</span>
+                <p className="text-white/80 leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
@@ -198,7 +198,7 @@ export default function AboutPage() {
       {/* ---- Support the Mission ---- */}
       <section className="section-padding bg-brand-black text-white">
         <div className="mx-auto max-w-3xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6 text-white">
             Help Us Keep the Doors Open
           </h2>
           <p className="text-white/70 mb-8 text-lg leading-relaxed">
@@ -226,7 +226,7 @@ export default function AboutPage() {
               href={SITE.calcomLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline inline-flex text-brand-black"
+              className="btn-outline inline-flex text-white"
             >
               Book a Court
             </Link>
@@ -235,12 +235,12 @@ export default function AboutPage() {
       </section>
 
       {/* ---- CTA to Book ---- */}
-      <section className="section-padding bg-brand-gray-light">
+      <section className="section-padding bg-brand-gray-dark">
         <div className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl mb-6">
+          <h2 className="text-3xl md:text-4xl mb-6 text-white">
             Ready to Play?
           </h2>
-          <p className="text-brand-black/70 mb-8 text-lg">
+          <p className="text-white/70 mb-8 text-lg">
             Book your session in under 60 seconds. No calls, no waiting — just
             you and the court.
           </p>

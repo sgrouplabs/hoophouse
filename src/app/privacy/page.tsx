@@ -11,8 +11,7 @@
  *
  * DESIGN RULES: Flat design, Inter font, no emojis. Legal content uses
  * a centered prose layout matching the waiver page.
- * ============================================================================
- */
+ * ============================================================================ */
 
 import type { Metadata } from "next";
 import { SITE } from "@/lib/data";
@@ -25,12 +24,12 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-brand-black">
       <div className="mx-auto max-w-3xl">
         {/* ---- Header ---- */}
         <div className="mb-12">
-          <h1 className="text-3xl font-bold text-brand-black md:text-4xl">
-            Privacy <span className="text-brand-orange">Policy</span>
+          <h1 className="text-3xl font-bold text-white md:text-4xl">
+            Privacy <span className="text-brand-gold">Policy</span>
           </h1>
           <p className="mt-4 text-brand-gray-mid">
             Last updated:{" "}
@@ -46,15 +45,15 @@ export default function PrivacyPage() {
         <div className="space-y-8">
           {/* Introduction */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               1. Overview
             </h2>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               {SITE.name} (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or
               &ldquo;our&rdquo;) operates the website at{" "}
               <a
                 href="https://hoophouse502.com"
-                className="text-brand-orange hover:underline"
+                className="text-brand-gold hover:underline"
               >
                 hoophouse502.com
               </a>{" "}
@@ -69,18 +68,18 @@ export default function PrivacyPage() {
 
           {/* Section 2: Information We Collect */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               2. Information We Collect
             </h2>
 
-            <h3 className="mb-2 text-base font-semibold text-brand-black">
+            <h3 className="mb-2 text-base font-semibold text-white">
               2.1 Information You Provide
             </h3>
-            <p className="mb-3 text-sm leading-relaxed text-brand-black">
+            <p className="mb-3 text-sm leading-relaxed text-white">
               When you create a booking, accept our liability waiver, or
               contact us, we collect the following information:
             </p>
-            <ul className="mb-4 list-inside list-disc space-y-1 text-sm text-brand-black">
+            <ul className="mb-4 list-inside list-disc space-y-1 text-sm text-white">
               <li>Full name</li>
               <li>Email address</li>
               <li>Phone number</li>
@@ -90,13 +89,13 @@ export default function PrivacyPage() {
               <li>Digital waiver signature and acceptance record</li>
             </ul>
 
-            <h3 className="mb-2 text-base font-semibold text-brand-black">
+            <h3 className="mb-2 text-base font-semibold text-white">
               2.2 Information Collected Automatically
             </h3>
-            <p className="mb-3 text-sm leading-relaxed text-brand-black">
+            <p className="mb-3 text-sm leading-relaxed text-white">
               When you visit our website, we automatically collect:
             </p>
-            <ul className="mb-4 list-inside list-disc space-y-1 text-sm text-brand-black">
+            <ul className="mb-4 list-inside list-disc space-y-1 text-sm text-white">
               <li>IP address and browser type</li>
               <li>Pages visited and time spent on pages</li>
               <li>Device type and operating system</li>
@@ -104,10 +103,10 @@ export default function PrivacyPage() {
               <li>Approximate location based on IP address</li>
             </ul>
 
-            <h3 className="mb-2 text-base font-semibold text-brand-black">
+            <h3 className="mb-2 text-base font-semibold text-white">
               2.3 Facility Data
             </h3>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               Our facility may be equipped with security cameras. Video
               footage is used solely for security and safety purposes and
               is retained for a limited period. We do not use surveillance
@@ -117,15 +116,15 @@ export default function PrivacyPage() {
 
           {/* Section 3: How We Use Your Information */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               3. How We Use Your Information
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-black">
+            <p className="mb-3 text-sm leading-relaxed text-white">
               We use your personal information for the following purposes:
             </p>
-            <ul className="list-inside list-disc space-y-1 text-sm text-brand-black">
+            <ul className="list-inside list-disc space-y-1 text-sm text-white">
               <li>To process and confirm your court bookings</li>
-              <li>To deliver your unique access code for facility entry</li>
+              <li>To deliver your booking confirmation for facility entry</li>
               <li>To send booking confirmations and reminders</li>
               <li>To maintain records of liability waiver acceptance</li>
               <li>To process payments and issue receipts</li>
@@ -138,15 +137,15 @@ export default function PrivacyPage() {
 
           {/* Section 4: Third-Party Services */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               4. Third-Party Services
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-black">
+            <p className="mb-3 text-sm leading-relaxed text-white">
               We rely on the following third-party service providers to
               operate our business. Each provider has its own privacy
               policy governing how they handle your data:
             </p>
-            <ul className="mb-4 list-inside list-disc space-y-2 text-sm text-brand-black">
+            <ul className="mb-4 list-inside list-disc space-y-2 text-sm text-white">
               <li>
                 <strong className="font-semibold">Cal.com</strong> —
                 Handles our online booking and scheduling. Your name and
@@ -175,7 +174,7 @@ export default function PrivacyPage() {
                 and operational purposes.
               </li>
             </ul>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               We do not sell, rent, or trade your personal information to
               any third party for marketing purposes.
             </p>
@@ -183,14 +182,14 @@ export default function PrivacyPage() {
 
           {/* Section 5: Cookies */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               5. Cookies &amp; Tracking Technologies
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-black">
+            <p className="mb-3 text-sm leading-relaxed text-white">
               Our website uses cookies and similar tracking technologies
               for the following purposes:
             </p>
-            <ul className="mb-4 list-inside list-disc space-y-2 text-sm text-brand-black">
+            <ul className="mb-4 list-inside list-disc space-y-2 text-sm text-white">
               <li>
                 <strong className="font-semibold">Essential cookies</strong> —
                 Required for the website to function properly (e.g.,
@@ -208,7 +207,7 @@ export default function PrivacyPage() {
                 provider as part of their embedded services.
               </li>
             </ul>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               You can control and delete cookies through your browser
               settings. Disabling essential cookies may affect the
               functionality of the booking system.
@@ -217,10 +216,10 @@ export default function PrivacyPage() {
 
           {/* Section 6: Data Retention */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               6. Data Retention
             </h2>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               We retain your personal information for as long as necessary
               to fulfill the purposes outlined in this policy. Booking
               records and waiver acceptance records are retained for a
@@ -234,10 +233,10 @@ export default function PrivacyPage() {
 
           {/* Section 7: Data Security */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               7. Data Security
             </h2>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               We implement appropriate technical and organizational measures
               to protect your personal information, including: encrypted
               connections (HTTPS/TLS) for all data transmission; secure
@@ -251,14 +250,14 @@ export default function PrivacyPage() {
 
           {/* Section 8: Your Rights */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               8. Your Rights
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-black">
+            <p className="mb-3 text-sm leading-relaxed text-white">
               Depending on your location, you may have the following rights
               regarding your personal information:
             </p>
-            <ul className="mb-4 list-inside list-disc space-y-1 text-sm text-brand-black">
+            <ul className="mb-4 list-inside list-disc space-y-1 text-sm text-white">
               <li><strong className="font-semibold">Access</strong> — Request a copy of the personal data we hold about you</li>
               <li><strong className="font-semibold">Correction</strong> — Request that we correct inaccurate or incomplete data</li>
               <li><strong className="font-semibold">Deletion</strong> — Request that we delete your personal data (subject to legal retention requirements)</li>
@@ -266,11 +265,11 @@ export default function PrivacyPage() {
               <li><strong className="font-semibold">Data portability</strong> — Request your data in a machine-readable format</li>
               <li><strong className="font-semibold">Withdraw consent</strong> — Withdraw consent for data processing at any time</li>
             </ul>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               To exercise any of these rights, contact us at{" "}
               <a
                 href={`mailto:${SITE.email}`}
-                className="text-brand-orange hover:underline"
+                className="text-brand-gold hover:underline"
               >
                 {SITE.email}
               </a>
@@ -280,10 +279,10 @@ export default function PrivacyPage() {
 
           {/* Section 9: Children's Privacy */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               9. Children&rsquo;s Privacy
             </h2>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               Our services are available to minors only when a parent or
               legal guardian signs the liability waiver on their behalf. We
               do not knowingly collect personal information directly from
@@ -292,7 +291,7 @@ export default function PrivacyPage() {
               contact us immediately at{" "}
               <a
                 href={`mailto:${SITE.email}`}
-                className="text-brand-orange hover:underline"
+                className="text-brand-gold hover:underline"
               >
                 {SITE.email}
               </a>{" "}
@@ -302,10 +301,10 @@ export default function PrivacyPage() {
 
           {/* Section 10: Updates */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               10. Updates to This Policy
             </h2>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               We may update this Privacy Policy from time to time to
               reflect changes in our practices, technology, or legal
               requirements. When we make material changes, we will update
@@ -317,22 +316,22 @@ export default function PrivacyPage() {
 
           {/* Section 11: Contact */}
           <div>
-            <h2 className="mb-3 text-xl font-bold text-brand-black">
+            <h2 className="mb-3 text-xl font-bold text-white">
               11. Contact Us
             </h2>
-            <p className="text-sm leading-relaxed text-brand-black">
+            <p className="text-sm leading-relaxed text-white">
               If you have any questions, concerns, or requests regarding
               this Privacy Policy or your personal information, please
               contact us:
             </p>
-            <div className="mt-4 rounded-xl bg-brand-gray-light p-4 text-sm text-brand-black">
+            <div className="mt-4 rounded-xl bg-brand-gray-dark p-4 text-sm text-white">
               <p className="font-semibold">{SITE.name}</p>
               <p className="mt-1 text-brand-gray-mid">{SITE.address}</p>
               <p className="mt-1">
                 Email:{" "}
                 <a
                   href={`mailto:${SITE.email}`}
-                  className="text-brand-orange hover:underline"
+                  className="text-brand-gold hover:underline"
                 >
                   {SITE.email}
                 </a>
@@ -341,7 +340,7 @@ export default function PrivacyPage() {
                 Phone:{" "}
                 <a
                   href={SITE.phoneHref}
-                  className="text-brand-orange hover:underline"
+                  className="text-brand-gold hover:underline"
                 >
                   {SITE.phoneDisplay}
                 </a>

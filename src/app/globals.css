@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 /* ============================================================================
- * HOOPHOUSE502 — Theme Tokens
+ * HOOPHOUSE502 — Theme Tokens (Dark Theme)
  * ============================================================================
  *
  * Tailwind CSS v4 uses CSS-based configuration (no tailwind.config.js).
  * Custom colors are defined below as CSS variables and mapped into the
  * Tailwind theme via `@theme inline`. They become utility classes like
- * `bg-brand-orange`, `text-brand-black`, etc.
+ * `bg-brand-gold`, `text-white`, etc.
  *
  * Design System (STRICT):
- *   White   → Primary background / surfaces
- *   Black   → Base typography, headers
- *   Orange  → Accents, trim, buttons, highlighted text
+ *   Black   → Primary background / surfaces (#000000)
+ *   White   → Base typography, headers (#FFFFFF)
+ *   Gold    → Accents, trim, buttons, highlighted text (#F2C311)
  *   Anton   → Headings (bold condensed, uppercase) — matches AmeriSports
  *   Epilogue → Body text, nav, buttons — matches AmeriSports
  *   Flat    → No gradients, no shadows on primary surfaces, ultra-minimalist
@@ -21,18 +21,18 @@
 :root {
   /* Core palette */
   --color-white: #ffffff;
-  --color-black: #0a0a0a;
-  --color-orange: #ff6b1a; /* Primary CTA / accent */
-  --color-orange-dark: #e55500; /* Hover / active state */
-  --color-orange-light: #fff0e6; /* Subtle orange background tint */
-  --color-gofundme-orange: #ffa500; /* GoFundMe banner text color */
-  --color-gray-light: #f5f5f5; /* Card backgrounds */
+  --color-black: #000000;
+  --color-gold: #f2c311; /* Primary CTA / accent */
+  --color-gold-dark: #c49e0e; /* Hover / active state */
+  --color-gold-light: #2a2400; /* Subtle gold background tint */
+  --color-gofundme-gold: #ffa500; /* GoFundMe banner text color */
+  --color-gray-dark: #1a1a2e; /* Card / container backgrounds */
   --color-gray-mid: #a3a3a3; /* Secondary text */
-  --color-gray-border: #e5e5e5; /* Borders / dividers */
+  --color-gray-border: #333333; /* Borders / dividers */
 
   /* Semantic tokens */
-  --background: var(--color-white);
-  --foreground: var(--color-black);
+  --background: var(--color-black);
+  --foreground: var(--color-white);
 
   /* Font tokens */
   --font-display: var(--font-anton);
@@ -40,14 +40,14 @@
 }
 
 @theme inline {
-  /* Expose to Tailwind utility system: bg-brand-orange, text-brand-black, … */
+  /* Expose to Tailwind utility system: bg-brand-gold, text-white, … */
   --color-brand-white: var(--color-white);
   --color-brand-black: var(--color-black);
-  --color-brand-orange: var(--color-orange);
-  --color-brand-orange-dark: var(--color-orange-dark);
-  --color-brand-orange-light: var(--color-orange-light);
-  --color-brand-gofundme-orange: var(--color-gofundme-orange);
-  --color-brand-gray-light: var(--color-gray-light);
+  --color-brand-gold: var(--color-gold);
+  --color-brand-gold-dark: var(--color-gold-dark);
+  --color-brand-gold-light: var(--color-gold-light);
+  --color-brand-gofundme-gold: var(--color-gofundme-gold);
+  --color-brand-gray-dark: var(--color-gray-dark);
   --color-brand-gray-mid: var(--color-gray-mid);
   --color-brand-gray-border: var(--color-gray-border);
 
@@ -85,21 +85,21 @@ html {
 }
 
 /* ----------------------------------------------------------------------------
- * Utility: CTA button — reused across pages for consistent orange styling
+ * Utility: CTA button — reused across pages for consistent gold styling
  *   Usage: <button className="btn-cta">Book Now</button>
  * ---------------------------------------------------------------------------- */
 
 @layer components {
   .btn-cta {
-    @apply inline-flex items-center justify-center rounded-xl bg-brand-orange px-6 py-3 text-base font-semibold text-white transition-all duration-200 hover:bg-brand-orange-dark active:scale-95;
+    @apply inline-flex items-center justify-center rounded-xl bg-brand-gold px-6 py-3 text-base font-semibold text-black transition-all duration-200 hover:bg-brand-gold-dark active:scale-95;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-xl border-2 border-brand-black bg-white px-6 py-3 text-base font-semibold text-brand-black transition-all duration-200 hover:bg-brand-black hover:text-white active:scale-95;
+    @apply inline-flex items-center justify-center rounded-xl border-2 border-brand-gray-border bg-brand-black px-6 py-3 text-base font-semibold text-white transition-all duration-200 hover:border-brand-gold hover:text-brand-gold active:scale-95;
   }
 
   .card {
-    @apply rounded-2xl border border-brand-gray-border bg-white p-6 transition-shadow duration-200 hover:shadow-md;
+    @apply rounded-2xl border border-brand-gray-border bg-brand-gray-dark p-6 transition-shadow duration-200 hover:shadow-md;
   }
 
   .section-padding {

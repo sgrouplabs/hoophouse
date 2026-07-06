@@ -16,8 +16,8 @@
  *   - FAQPage JSON-LD schema injected at render time for AEO crawlers
  *   - Full keyboard accessibility (Enter/Space to toggle, Escape to close)
  *
- * DESIGN RULES: Flat design, white background, Anton headings, Epilogue body,
- * orange accent on headings and expand indicators.
+ * DESIGN RULES: Flat design, black background, Anton headings, Epilogue body,
+ * gold accent on headings and expand indicators.
  * ============================================================================ */
 
 import { useState, useRef, useEffect } from "react";
@@ -44,19 +44,19 @@ function FAQRow({
       {/* Question button */}
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between py-5 text-left transition-colors hover:text-brand-orange focus:outline-none focus-visible:rounded-lg focus-visible:ring-2 focus-visible:ring-brand-orange/40"
+        className="flex w-full items-center justify-between py-5 text-left transition-colors hover:text-brand-gold focus:outline-none focus-visible:rounded-lg focus-visible:ring-2 focus-visible:ring-brand-gold/40"
         aria-expanded={isOpen}
         aria-controls={`faq-answer-${item.id}`}
         id={`faq-question-${item.id}`}
       >
-        <span className="pr-4 text-base font-medium text-brand-black">
+        <span className="pr-4 text-base font-medium text-white">
           {item.question}
         </span>
         {/* Plus/minus indicator */}
         <span
           className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 transition-all duration-200 ${
             isOpen
-              ? "border-brand-orange bg-brand-orange text-white rotate-45"
+              ? "border-brand-gold bg-brand-gold text-black rotate-45"
               : "border-brand-gray-border text-brand-gray-mid"
           }`}
         >
@@ -85,7 +85,7 @@ function FAQRow({
           isOpen ? "max-h-screen pb-5" : "max-h-0"
         }`}
       >
-        <p className="text-sm leading-relaxed text-brand-black/80">
+        <p className="text-sm leading-relaxed text-white/80">
           {item.answer}
         </p>
 
@@ -94,7 +94,7 @@ function FAQRow({
           {item.keywords.map((kw) => (
             <span
               key={kw}
-              className="inline-block rounded-full bg-brand-gray-light px-2.5 py-0.5 text-xs text-brand-gray-mid"
+              className="inline-block rounded-full bg-brand-gray-dark px-2.5 py-0.5 text-xs text-brand-gray-mid"
             >
               {kw}
             </span>
@@ -138,15 +138,15 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="section-padding bg-brand-gray-light">
+    <section id="faq" className="section-padding bg-brand-gray-dark">
       <div className="mx-auto max-w-4xl">
         {/* ---- Section header ---- */}
         <div className="mb-12 text-center">
-          <h2 className="text-3xl font-bold text-brand-black md:text-4xl">
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
             Frequently Asked{" "}
-            <span className="text-brand-orange">Questions</span>
+            <span className="text-brand-gold">Questions</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-brand-black/70">
+          <p className="mx-auto mt-4 max-w-2xl text-white/70">
             Ask it like you&apos;d say it — we&apos;ve got you covered.
           </p>
         </div>
@@ -154,7 +154,7 @@ export default function FAQ() {
         {/* ---- Two-column layout: FAQ + Links ---- */}
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Left: FAQ Accordion */}
-          <div className="rounded-2xl border border-brand-gray-border bg-white px-6">
+          <div className="rounded-2xl border border-brand-gray-border bg-brand-gray-dark px-6">
             {AEO_FAQ_ITEMS.map((item) => (
               <FAQRow
                 key={item.id}
@@ -169,7 +169,7 @@ export default function FAQ() {
           <div className="space-y-6">
             {/* Quick Links */}
             <div className="card">
-              <h3 className="mb-3 text-lg font-semibold text-brand-black">
+              <h3 className="mb-3 text-lg font-semibold text-white">
                 Quick Links
               </h3>
               <ul className="space-y-2">
@@ -178,7 +178,7 @@ export default function FAQ() {
                     href="https://cal.com/hoophouse"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-brand-orange hover:underline"
+                    className="flex items-center gap-2 text-sm text-brand-gold hover:underline"
                   >
                     <svg
                       className="h-4 w-4 flex-shrink-0"
@@ -199,7 +199,7 @@ export default function FAQ() {
                 <li>
                   <a
                     href="/about"
-                    className="flex items-center gap-2 text-sm text-brand-orange hover:underline"
+                    className="flex items-center gap-2 text-sm text-brand-gold hover:underline"
                   >
                     <svg
                       className="h-4 w-4 flex-shrink-0"
@@ -222,7 +222,7 @@ export default function FAQ() {
                     href="https://gofund.me/8072dffdc"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-sm text-brand-orange hover:underline"
+                    className="flex items-center gap-2 text-sm text-brand-gold hover:underline"
                   >
                     <svg
                       className="h-4 w-4 flex-shrink-0"
@@ -245,21 +245,21 @@ export default function FAQ() {
 
             {/* Contact Card */}
             <div className="card">
-              <h3 className="mb-2 text-lg font-semibold text-brand-black">
+              <h3 className="mb-2 text-lg font-semibold text-white">
                 Still Have Questions?
               </h3>
-              <p className="text-sm text-brand-black/70">
+              <p className="text-sm text-white/70">
                 Call or text us at{" "}
                 <a
-                  href="tel:+15025506954"
-                  className="font-semibold text-brand-orange hover:underline"
+                  href="tel:+150****6954"
+                  className="font-semibold text-brand-gold hover:underline"
                 >
                   502-550-6954
                 </a>
                 , or email{" "}
                 <a
                   href="mailto:info@hoophouse502.com"
-                  className="font-semibold text-brand-orange hover:underline"
+                  className="font-semibold text-brand-gold hover:underline"
                 >
                   info@hoophouse502.com
                 </a>

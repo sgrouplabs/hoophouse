@@ -119,14 +119,14 @@ export default function WaiverForm() {
               />
             </svg>
           </div>
-          <h2 className="mt-4 text-2xl font-bold text-brand-black">
+          <h2 className="mt-4 text-2xl font-bold text-white">
             Waiver Accepted
           </h2>
           <p className="mt-2 text-brand-gray-mid">
             Thank you, {name.split(" ")[0]}. Your liability waiver has been
             accepted.
           </p>
-          <div className="mt-6 rounded-xl bg-white p-4 text-left text-sm">
+          <div className="mt-6 rounded-xl bg-brand-gray-dark p-4 text-left text-sm">
             <div className="flex justify-between border-b border-brand-gray-border pb-2">
               <span className="text-brand-gray-mid">Name:</span>
               <span className="font-semibold">{name}</span>
@@ -137,7 +137,7 @@ export default function WaiverForm() {
             </div>
             <div className="flex justify-between pt-2">
               <span className="text-brand-gray-mid">Reference ID:</span>
-              <span className="font-mono font-semibold text-brand-orange">
+              <span className="font-mono font-semibold text-brand-gold">
                 {refId}
               </span>
             </div>
@@ -170,7 +170,7 @@ export default function WaiverForm() {
     <form onSubmit={handleSubmit} className="mx-auto max-w-lg space-y-5">
       {/* --- Full Name --- */}
       <div>
-        <label className="mb-1 block text-sm font-medium text-brand-black">
+        <label className="mb-1 block text-sm font-medium text-white">
           Full Legal Name
         </label>
         <input
@@ -178,13 +178,13 @@ export default function WaiverForm() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           placeholder="John Doe"
-          className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+          className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
         />
       </div>
 
       {/* --- Email --- */}
       <div>
-        <label className="mb-1 block text-sm font-medium text-brand-black">
+        <label className="mb-1 block text-sm font-medium text-white">
           Email Address
         </label>
         <input
@@ -192,20 +192,20 @@ export default function WaiverForm() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="john@example.com"
-          className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+          className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
         />
       </div>
 
       {/* --- Date of Birth --- */}
       <div>
-        <label className="mb-1 block text-sm font-medium text-brand-black">
+        <label className="mb-1 block text-sm font-medium text-white">
           Date of Birth
         </label>
         <input
           type="date"
           value={dob}
           onChange={(e) => setDob(e.target.value)}
-          className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+          className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
         />
         <p className="mt-1 text-xs text-brand-gray-mid">
           You must be 18 or older to sign. Minors require a parent or guardian signature.
@@ -214,7 +214,7 @@ export default function WaiverForm() {
 
       {/* --- Digital Signature --- */}
       <div>
-        <label className="mb-1 block text-sm font-medium text-brand-black">
+        <label className="mb-1 block text-sm font-medium text-white">
           Digital Signature
         </label>
         <input
@@ -222,7 +222,7 @@ export default function WaiverForm() {
           value={signature}
           onChange={(e) => setSignature(e.target.value)}
           placeholder="Type your full legal name as your signature"
-          className="w-full rounded-xl border border-brand-gray-border bg-white px-4 py-3 text-brand-black placeholder:text-brand-gray-mid focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+          className="w-full rounded-xl border border-brand-gray-border bg-brand-gray-dark px-4 py-3 text-white placeholder:text-brand-gray-mid focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/20"
         />
       </div>
 
@@ -233,9 +233,9 @@ export default function WaiverForm() {
           id="agreement"
           checked={agreed}
           onChange={(e) => setAgreed(e.target.checked)}
-          className="mt-1 h-5 w-5 rounded border-brand-gray-border text-brand-orange focus:ring-brand-orange/20"
+          className="mt-1 h-5 w-5 rounded border-brand-gray-border text-brand-gold focus:ring-brand-gold/20"
         />
-        <label htmlFor="agreement" className="text-sm text-brand-black">
+        <label htmlFor="agreement" className="text-sm text-white">
           I have read, understand, and voluntarily agree to all terms of
           this liability waiver. I understand that by checking this box and
           typing my name above, I am providing a legally binding digital

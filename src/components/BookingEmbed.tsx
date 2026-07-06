@@ -68,7 +68,7 @@ export default function BookingEmbed() {
         ref={containerRef}
         data-cal-link={CALCOM_NAMESPACE}
         data-cal-config='{"layout":"month_view","theme":"light"}'
-        className="min-h-[600px] w-full rounded-2xl border border-brand-gray-border bg-white p-4"
+        className="min-h-[600px] w-full rounded-2xl border border-brand-gray-border bg-brand-gray-dark p-4"
       >
         {/* Fallback content shown before the script loads */}
         <div className="flex h-[600px] items-center justify-center text-center">
