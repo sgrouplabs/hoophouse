@@ -54,13 +54,13 @@ export default function AboutPage() {
       </section>
 
       {/* ---- The Inheritance ---- */}
-      <section className="section-padding bg-brand-gray-dark">
+      <section className="section-padding bg-[#F2C311]">
         <article className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
+          <h2 className="text-3xl md:text-4xl text-center mb-10 text-black">
             How It Began
           </h2>
 
-          <div className="space-y-6 text-lg leading-relaxed text-white/80">
+          <div className="space-y-6 text-lg leading-relaxed text-black/80">
             <p>
               With help from family, friends, and the Louisville basketball community,
               Paul began renovating the space — installing a regulation basketball court
@@ -134,25 +134,25 @@ export default function AboutPage() {
       </section>
 
       {/* ---- Paul's Story ---- */}
-      <section className="section-padding bg-brand-gray-dark">
+      <section className="section-padding bg-[#F2C311]">
         <article className="mx-auto max-w-3xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
+          <h2 className="text-3xl md:text-4xl text-center mb-10 text-black">
             The Founder
           </h2>
 
           <div className="card p-8 md:p-12">
-            <blockquote className="space-y-4 text-lg leading-relaxed text-white/80">
+            <blockquote className="space-y-4 text-lg leading-relaxed text-black/80">
               <p>
                 "Young people don't need more restrictions — they need more opportunities. This building was his way of giving back to the neighborhood he loved. When I inherited it, I knew I had to honor that spirit."
               </p>
-              <footer className="text-brand-gold font-semibold">
+              <footer className="text-black font-semibold">
                 — Paul White, Founder
               </footer>
             </blockquote>
           </div>
 
-          <div className="mt-8 text-center text-white/70">
-            <p className="text-base leading-relaxed">
+          <div className="mt-8 text-center text-black/70">
+            <p className="text-base leading-relaxed text-black">
               Paul White is a Louisville native with a deep love for his city and its
               communities. As Founder and Community Director of Flaget Hoop House 502,
               he oversees basketball programming, tutoring partnerships, and mental
@@ -185,10 +185,10 @@ export default function AboutPage() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 p-4 bg-brand-gray-dark rounded-xl border border-brand-gray-border"
+                className="flex items-start gap-4 p-4 bg-[#F2C311] rounded-xl border border-black/20"
               >
-                <span className="mt-1 flex-shrink-0 text-brand-gold text-2xl">•</span>
-                <p className="text-white/80 leading-relaxed">{item}</p>
+                <span className="mt-1 flex-shrink-0 text-black text-2xl">•</span>
+                <p className="text-black/80 leading-relaxed">{item}</p>
               </div>
             ))}
           </div>
@@ -235,12 +235,12 @@ export default function AboutPage() {
       </section>
 
       {/* ---- CTA to Book ---- */}
-      <section className="section-padding bg-brand-gray-dark">
+      <section className="section-padding bg-[#F2C311]">
         <div className="mx-auto max-w-2xl px-6 text-center">
-          <h2 className="text-3xl md:text-4xl mb-6 text-white">
+          <h2 className="text-3xl md:text-4xl mb-6 text-black">
             Ready to Play?
           </h2>
-          <p className="text-white/70 mb-8 text-lg">
+          <p className="text-black/70 mb-8 text-lg">
             Book your session in under 60 seconds. No calls, no waiting — just
             you and the court.
           </p>
