@@ -141,11 +141,11 @@ export default function AboutPage() {
           </h2>
 
           <div className="card p-8 md:p-12">
-            <blockquote className="space-y-4 text-lg leading-relaxed text-black/80">
+            <blockquote className="space-y-4 text-lg leading-relaxed text-white/80">
               <p>
                 "Young people don't need more restrictions — they need more opportunities."
               </p>
-              <footer className="text-black font-semibold">
+              <footer className="text-white font-semibold">
                 — Paul White, Founder
               </footer>
             </blockquote>
@@ -216,7 +216,7 @@ export default function AboutPage() {
             href={SITE.calcomLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-cta inline-flex"
+            className="inline-flex items-center justify-center rounded-xl bg-black px-6 py-3 text-base font-semibold text-[#F2C311] transition-all duration-200 hover:bg-gray-900 active:scale-95"
           >
             Book a Court Now
           </Link>
