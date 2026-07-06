@@ -143,7 +143,7 @@ export default function AboutPage() {
           <div className="card p-8 md:p-12">
             <blockquote className="space-y-4 text-lg leading-relaxed text-black/80">
               <p>
-                "Young people don't need more restrictions — they need more opportunities. This building was his way of giving back to the neighborhood he loved. When I inherited it, I knew I had to honor that spirit."
+                "Young people don't need more restrictions — they need more opportunities."
               </p>
               <footer className="text-black font-semibold">
                 — Paul White, Founder
@@ -161,38 +161,6 @@ export default function AboutPage() {
             </p>
           </div>
         </article>
-      </section>
-
-      {/* ---- Facility Highlights ---- */}
-      <section className="section-padding bg-brand-black">
-        <div className="mx-auto max-w-4xl px-6">
-          <h2 className="text-3xl md:text-4xl text-center mb-10 text-white">
-            The Facility
-          </h2>
-
-          <div className="space-y-6">
-            {[
-              "Full-size regulation court (94' × 50') with premium maple hardwood",
-              "Six adjustable-height goals (regulation 10' + youth heights)",
-              "Daktronics shot clock & scoreboard — real game feel",
-              "Bluetooth sound system — bring your own playlist",
-              "Climate-controlled year-round — no sweat on the floor",
-              "LED lighting — bright, even, no glare",
-              "Keyless entry via unique access code — secure & instant",
-              "Security cameras monitored remotely for safety",
-              "Free parking lot directly in front",
-              "Water fountain & Gatorade cooler (full-court rentals)",
-            ].map((item, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-4 p-4 bg-[#F2C311] rounded-xl border border-black/20"
-              >
-                <span className="mt-1 flex-shrink-0 text-black text-2xl">•</span>
-                <p className="text-black/80 leading-relaxed">{item}</p>
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* ---- Support the Mission ---- */}
