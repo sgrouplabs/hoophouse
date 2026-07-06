@@ -10,7 +10,7 @@
  * Duration modal: 1hr / 2hr / 3hr / 4hr → each maps to a distinct Cal.com
  * namespace with its own data-cal-link and data-cal-namespace.
  *
- * DESIGN RULES: Flat black background, minimalist header, no basketball
+ * DESIGN RULES: Flat grey background, minimalist header, no basketball
  * imagery. Solid brand-gold buttons with hover states.
  * ============================================================================ */
 
@@ -79,14 +79,14 @@ export default function SchedulingSection() {
 
   return (
     <>
-      <section id="scheduling" className="section-padding bg-brand-gray-dark">
+      <section id="scheduling" className="section-padding bg-gray-300">
         <div className="mx-auto max-w-4xl">
           {/* ---- Section header ---- */}
           <div className="mb-12 text-center">
-            <h2 className="text-3xl font-bold text-white md:text-4xl">
+            <h2 className="text-3xl font-bold text-black md:text-4xl">
               Book Your <span className="text-brand-gold">Court</span>
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-brand-gray-mid">
+            <p className="mx-auto mt-4 max-w-2xl text-black">
               Choose a booking type below. A calendar will open so you can
               pick your date, time, and confirm instantly.
             </p>
@@ -116,15 +116,15 @@ export default function SchedulingSection() {
       {modalOpen && (
         <dialog
           open
-          className="fixed inset-0 z-[9999] mx-auto w-full max-w-lg rounded-2xl border border-brand-gray-border bg-brand-gray-dark text-white shadow-2xl backdrop:bg-black/60"
+          className="fixed inset-0 z-[9999] mx-auto w-full max-w-lg rounded-2xl border border-brand-gray-border bg-gray-300 text-black shadow-2xl backdrop:bg-black/60"
           onClose={() => setModalOpen(false)}
         >
           {/* Modal header */}
           <div className="flex items-center justify-between border-b border-brand-gray-border px-6 pt-6 pb-4">
-            <h3 className="text-xl font-bold text-white">Select Duration</h3>
+            <h3 className="text-xl font-bold text-black">Select Duration</h3>
             <button
               onClick={() => setModalOpen(false)}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-brand-gray-border text-brand-gray-mid transition-colors hover:border-brand-gold hover:text-brand-gold"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-400 text-black/70 transition-colors hover:border-brand-gold hover:text-brand-gold"
               aria-label="Close"
             >
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

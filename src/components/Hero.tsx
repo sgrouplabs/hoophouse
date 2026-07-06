@@ -3,12 +3,12 @@
  * Hero Section (Server Component)
  * ============================================================================
  *
- * Flat black background. Bold headline "Your Court. Your Time." with
- * "Your Time" in gold. Sub-headline explains the 24/7 self-service model.
+ * Flat grey background. Bold headline "Your Court. Your Time." with
+ * "Your Time" in gold. Sub-headline simplified per brand update.
  * Primary gold CTA button links to the booking section.
  *
  * DESIGN RULES: No basketball imagery, no gradients, no emojis. Pure flat
- * design — black background, white text, gold accent.
+ * design — grey background, black text, gold accent.
  * ============================================================================ */
 
 import Link from "next/link";
@@ -16,19 +16,17 @@ import { SITE } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section className="bg-brand-black">
+    <section className="bg-gray-300">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32">
         <div className="max-w-3xl">
           {/* Headline */}
-          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-white md:text-6xl">
+          <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-black md:text-6xl">
             Your Court. <span className="text-brand-gold">Your Time.</span>
           </h1>
 
           {/* Sub-headline */}
-          <p className="mt-6 text-lg text-brand-gray-mid md:text-xl">
-            <strong className="font-semibold text-white">HOOPHOUSE502</strong> is a <strong className="font-semibold text-white">24/7 self-service</strong> court rental
-            in Louisville, KY. Book online, get your confirmation, and play —
-            no staff, no waiting, no hassle.
+          <p className="mt-6 text-lg text-black md:text-xl">
+            <strong className="font-semibold text-black">HOOPHOUSE502</strong> is a basketball court rental in Louisville, KY.
           </p>
 
           {/* CTA */}

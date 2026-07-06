@@ -32,12 +32,6 @@ export default function CTASection() {
           >
             Book Court
           </Link>
-          <Link
-            href="/#pricing"
-            className="inline-flex items-center justify-center rounded-xl border-2 border-black px-8 py-4 text-lg font-bold text-black transition-all hover:bg-black hover:text-brand-gold"
-          >
-            View Pricing
-          </Link>
         </div>
       </div>
     </section>

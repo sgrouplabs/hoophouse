@@ -29,7 +29,7 @@ export const SITE = {
 
   /** Clickable phone link (tel: format). */
   phoneDisplay: "502-550-6954",
-  phoneHref: "tel:+15025506954",
+  phoneHref: "tel:+150****6954",
 
   /** Contact email. */
   email: "info@hoophouse502.com",
@@ -63,7 +63,6 @@ export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "How It Works", href: "/#how-it-works" },
-  { label: "Pricing", href: "/#pricing" },
   { label: "Book Court", href: "https://cal.com/hoophouse", cta: true },
 ] as const;
 
@@ -89,8 +88,7 @@ export const HOW_IT_WORKS: HowItWorksStep[] = [
     id: "book-online",
     step: 1,
     title: "Book Online",
-    description:
-      "Choose your date, time slot, and court type. Pay securely online — no calls needed.",
+    description: "Choose your date, time slot, and court type.",
     icon: "calendar",
   },
   {

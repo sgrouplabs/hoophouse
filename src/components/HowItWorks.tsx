@@ -8,7 +8,7 @@
  *   2. Get Confirmation (mail icon)
  *   3. Arrive & Play (user icon)
  *
- * Uses inline SVG flat icons in white/gold — no emojis, no basketball
+ * Uses inline SVG flat icons in black/gold — no emojis, no basketball
  * imagery. Data comes from the HOW_IT_WORKS array in @/lib/data.
  * ============================================================================
  */
@@ -44,7 +44,7 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
   return (
     <svg
-      className="h-10 w-10 text-white"
+      className="h-10 w-10 text-black"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -56,14 +56,14 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-brand-black">
+    <section id="how-it-works" className="section-padding bg-gray-300">
       <div className="mx-auto max-w-7xl">
         {/* ---- Section header ---- */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-white md:text-4xl">
+          <h2 className="text-3xl font-bold text-black md:text-4xl">
             How It <span className="text-brand-gold">Works</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-brand-gray-mid">
+          <p className="mx-auto mt-4 max-w-2xl text-black">
             Three simple steps. No phone calls, no front desk, no waiting.
           </p>
         </div>
@@ -83,12 +83,12 @@ export default function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3 className="mb-2 text-lg font-semibold text-white">
+              <h3 className="mb-2 text-lg font-semibold text-black">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm leading-relaxed text-brand-gray-mid">
+              <p className="text-sm leading-relaxed text-black">
                 {step.description}
               </p>
             </div>

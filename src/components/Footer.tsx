@@ -6,8 +6,8 @@
  * Minimalist footer: copyright, basic contact placeholder, and a link to
  * the liability waiver page.
  *
- * DESIGN RULES: Flat black background, white text, no emojis, no basketball
- * imagery. Orange accent on section headers only.
+ * DESIGN RULES: Flat grey background, black text, no emojis, no basketball
+ * imagery. Gold accent on section headers only.
  * ============================================================================
  */
 
@@ -18,14 +18,14 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-brand-gray-border bg-brand-black text-white">
+    <footer className="border-t border-gray-400 bg-gray-300 text-black">
       <div className="mx-auto max-w-7xl px-6 py-8 md:px-12">
         {/* ---- Simple row: brand + contact + links ---- */}
         <div className="flex flex-col items-center justify-between gap-6 md:flex-row md:items-start">
           {/* Brand */}
           <div>
             <span className="text-lg font-bold">{SITE.name}</span>
-            <p className="mt-1 text-sm text-white/60">{SITE.tagline}</p>
+            <p className="mt-1 text-sm text-black/60">{SITE.tagline}</p>
           </div>
 
           {/* Contact */}
@@ -33,12 +33,12 @@ export default function Footer() {
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-gold">
               Contact
             </h3>
-            <ul className="space-y-1 text-sm text-white/70">
+            <ul className="space-y-1 text-sm text-black/70">
               <li>{SITE.address}</li>
               <li>
                 <Link
                   href={SITE.phoneHref}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   {SITE.phoneDisplay}
                 </Link>
@@ -46,7 +46,7 @@ export default function Footer() {
               <li>
                 <Link
                   href={`mailto:${SITE.email}`}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   {SITE.email}
                 </Link>
@@ -59,13 +59,13 @@ export default function Footer() {
             <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-brand-gold">
               Links
             </h3>
-            <ul className="space-y-1 text-sm text-white/70">
+            <ul className="space-y-1 text-sm text-black/70">
               <li>
                 <Link
                   href={SITE.calcomLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   Book a Court
                 </Link>
@@ -73,7 +73,7 @@ export default function Footer() {
               <li>
                 <Link
                   href={SITE.waiverLink}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   Liability Waiver
                 </Link>
@@ -81,7 +81,7 @@ export default function Footer() {
               <li>
                 <Link
                   href={SITE.privacyLink}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   Privacy Policy
                 </Link>
@@ -89,7 +89,7 @@ export default function Footer() {
               <li>
                 <Link
                   href={SITE.instagram}
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   Instagram
                 </Link>
@@ -97,7 +97,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/admin/login"
-                  className="transition-colors hover:text-white"
+                  className="transition-colors hover:text-black"
                 >
                   Admin Login
                 </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
         </div>
 
         {/* ---- Copyright bar ---- */}
-        <div className="mt-8 border-t border-white/10 pt-4 text-center text-xs text-white/50">
+        <div className="mt-8 border-t border-black/10 pt-4 text-center text-xs text-black/50">
           &copy; {year} {SITE.name}. All rights reserved.
         </div>
       </div>
