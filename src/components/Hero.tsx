@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section className="border-b border-gray-400 bg-black">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32">
-        <div className="max-w-3xl">
+        <div className="mx-auto max-w-3xl text-center">
           {/* Headline */}
           <h1 className="text-4xl font-extrabold leading-tight tracking-widest text-white md:text-6xl">
             Your Court. <span className="text-[#F2C311]">Your Time.</span>
@@ -30,7 +30,7 @@ export default function Hero() {
           </p>
 
           {/* CTA */}
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row">
             <Link
               href={SITE.calcomLink}
               target="_blank"
