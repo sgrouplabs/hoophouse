@@ -107,19 +107,4 @@ html {
   }
 }
 
-/* GoFundMe marquee animation — used by inline style on the banner */
-@keyframes marquee-scroll {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Reduced motion support for GoFundMe banner */
-@media (prefers-reduced-motion: reduce) {
-  [style*="animation"] {
-    animation: none !important;
-  }
-}
+/* No-op — GoFundMe banner animation was removed */

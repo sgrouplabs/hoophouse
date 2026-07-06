@@ -13,7 +13,6 @@
  * Features:
  *   - Voice-search optimized Q&As (how, where, who, what, can)
  *   - Internal linking from answers to /, /about, /booking
- *   - Embedded YouTube media placeholders with <figure> wrappers
  *   - FAQPage JSON-LD schema injected at render time for AEO crawlers
  *   - Full keyboard accessibility (Enter/Space to toggle, Escape to close)
  *
@@ -106,39 +105,6 @@ function FAQRow({
   );
 }
 
-// --- YouTube Media Placeholder Component ------------------------------------
-
-function YouTubeEmbed({
-  videoId,
-  title,
-  description,
-}: {
-  videoId: string;
-  title: string;
-  description: string;
-}) {
-  return (
-    <figure className="card overflow-hidden p-0">
-      <div className="relative" style={{ paddingBottom: "56.25%" }}>
-        {/* iframe with descriptive title */}
-        <iframe
-          src={`https://www.youtube-nocookie.com/embed/${videoId}`}
-          title={title}
-          className="absolute inset-0 h-full w-full border-0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          loading="lazy"
-        />
-      </div>
-      <figcaption className="p-4">
-        <blockquote className="text-sm text-brand-black/80 italic">
-          &ldquo;{description}&rdquo;
-        </blockquote>
-      </figcaption>
-    </figure>
-  );
-}
-
 // --- Main Component ---------------------------------------------------------
 
 export default function FAQ() {
@@ -185,7 +151,7 @@ export default function FAQ() {
           </p>
         </div>
 
-        {/* ---- Two-column layout: FAQ + Media ---- */}
+        {/* ---- Two-column layout: FAQ + Links ---- */}
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Left: FAQ Accordion */}
           <div className="rounded-2xl border border-brand-gray-border bg-white px-6">
@@ -199,27 +165,8 @@ export default function FAQ() {
             ))}
           </div>
 
-          {/* Right: Media & Community Links */}
+          {/* Right: Community Links & Contact */}
           <div className="space-y-6">
-            {/* YouTube Embeds */}
-            <div>
-              <h3 className="mb-4 text-lg font-semibold text-brand-black">
-                Watch &amp; Learn
-              </h3>
-              <div className="space-y-4">
-                <YouTubeEmbed
-                  videoId="dQw4w9WgXcQ"
-                  title="Flaget Hoop House 502 — Inside Louisville's Community Basketball Hub in the Shawnee Neighborhood"
-                  description="Take a tour of our 24/7 self-service basketball court facility in Louisville, KY. See the court, the scoring system, and why young people love playing here."
-                />
-                <YouTubeEmbed
-                  videoId="dQw4w9WgXcQ"
-                  title="How to Book a Basketball Court at Hoop House 502 — Louisville Self-Service Court Rental Guide"
-                  description="Step-by-step walkthrough of booking a court, getting your access code, and entering the facility — all from your phone."
-                />
-              </div>
-            </div>
-
             {/* Quick Links */}
             <div className="card">
               <h3 className="mb-3 text-lg font-semibold text-brand-black">
@@ -311,10 +258,10 @@ export default function FAQ() {
                 </a>
                 , or email{" "}
                 <a
-                  href="mailto:book@hoophouse502.com"
+                  href="mailto:info@hoophouse502.com"
                   className="font-semibold text-brand-orange hover:underline"
                 >
-                  book@hoophouse502.com
+                  info@hoophouse502.com
                 </a>
                 .
               </p>

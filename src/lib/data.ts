@@ -32,7 +32,7 @@ export const SITE = {
   phoneHref: "tel:+15025506954",
 
   /** Contact email. */
-  email: "book@hoophouse502.com",
+  email: "info@hoophouse502.com",
 
   /**
    * Cal.com scheduling link (root namespace).
@@ -206,13 +206,13 @@ export const FAQ_ITEMS: FAQItem[] = [
     id: "cancellation-policy",
     question: "What is your cancellation policy?",
     answer:
-      "Cancellations made at least 24 hours before your booking receive a full refund. Cancellations within 24 hours of the booking are non-refundable. To cancel, use the link in your confirmation email or contact us at book@hoophouse502.com.",
+      "Cancellations made at least 24 hours before your booking receive a full refund. Cancellations within 24 hours of the booking are non-refundable. To cancel, use the link in your confirmation email or contact us at info@hoophouse502.com.",
   },
   {
     id: "can-i-book-recurring",
     question: "Can I book recurring sessions for my team?",
     answer:
-      "Yes. We offer bulk discounts for teams that need weekly practice slots. Contact us at book@hoophouse502.com with your preferred day, time, and frequency, and we'll set up a recurring booking at a discounted rate.",
+      "Yes. We offer bulk discounts for teams that need weekly practice slots. Contact us at info@hoophouse502.com with your preferred day, time, and frequency, and we'll set up a recurring booking at a discounted rate.",
   },
   {
     id: "age-requirements",
