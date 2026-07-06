@@ -3,20 +3,20 @@
  * Root Layout (Server Component)
  * ============================================================================
  *
- * Wraps every page. Loads Anton + Epilogue via next/font/google, sets global
- * metadata, injects JSON-LD structured data for AEO (Answer Engine Optimization),
+ * Wraps every page. Loads Anton + Epilogue + Bebas Neue via next/font/google,
+ * sets global metadata, injects JSON-LD structured data for AEO,
  * and renders the Navbar + Footer around page content.
  *
  * Typography (matching AmeriSports):
- *   Anton    → Headings (h1, h2, h3) — bold condensed sans-serif, uppercase
- *   Epilogue → Body text, nav, buttons — modern sans-serif (400/700)
+ *   Bebas Neue   → Headings (h1, h2, h3) — bold condensed sans-serif, uppercase
+ *   Epilogue     → Body text, nav, buttons — modern sans-serif (400/700)
  *
  * In Next.js 16 App Router, the root layout MUST export a default component
  * that returns <html><body>…</body></html>. Only one root layout per app.
  * ============================================================================ */
 
 import type { Metadata } from "next";
-import { Anton, Epilogue } from "next/font/google";
+import { Anton, Epilogue, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -41,6 +41,14 @@ const epilogue = Epilogue({
   display: "swap",
 });
 
+// Bebas Neue — athletic condensed display font for global headings.
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+});
+
 // --- Metadata (SEO) --------------------------------------------------------
 export const metadata: Metadata = rootMetadata;
 
@@ -59,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${epilogue.variable} h-full antialiased`}
+      className={`${anton.variable} ${epilogue.variable} ${bebasNeue.variable} h-full antialiased`}
     >
       <head>
         {/* JSON-LD Structured Data — Organization + LocalBusiness + FAQPage */}
@@ -69,8 +77,8 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="min-h-full flex flex-col bg-brand-black">
-        {/* GoFundMe Donation Banner — black bg, orange text, static */}
+      <body className="min-h-full flex flex-col bg-black">
+        {/* GoFundMe Donation Banner — black bg, gold text, static */}
         <div
           className="flex w-full items-center justify-center bg-black py-2.5"
           role="region"
@@ -80,7 +88,7 @@ export default function RootLayout({
             href="https://gofund.me/8072dffdc"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-semibold text-[#ffa500] underline decoration-2 underline-offset-2 transition-opacity hover:opacity-80"
+            className="font-semibold text-[#F2C311] underline decoration-2 underline-offset-2 transition-opacity hover:opacity-80"
           >
             We are accepting donations. Click here to donate to our GoFundMe!
           </a>

@@ -8,7 +8,7 @@
  *   2. Get Confirmation (mail icon)
  *   3. Arrive & Play (user icon)
  *
- * Uses inline SVG flat icons in black/gold — no emojis, no basketball
+ * Uses inline SVG flat icons in white/gold — no emojis, no basketball
  * imagery. Data comes from the HOW_IT_WORKS array in @/lib/data.
  * ============================================================================
  */
@@ -44,7 +44,7 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
   return (
     <svg
-      className="h-10 w-10 text-black"
+      className="h-10 w-10 text-white"
       fill="none"
       stroke="currentColor"
       viewBox="0 0 24 24"
@@ -56,14 +56,14 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-gray-300">
+    <section id="how-it-works" className="section-padding bg-black">
       <div className="mx-auto max-w-7xl">
         {/* ---- Section header ---- */}
         <div className="mb-16 text-center">
-          <h2 className="text-3xl font-bold text-black md:text-4xl">
-            How It <span className="text-brand-gold">Works</span>
+          <h2 className="text-3xl font-bold text-white md:text-4xl">
+            How It <span className="text-[#F2C311]">Works</span>
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-black">
+          <p className="mx-auto mt-4 max-w-2xl text-white">
             Three simple steps. No phone calls, no front desk, no waiting.
           </p>
         </div>
@@ -73,7 +73,7 @@ export default function HowItWorks() {
           {HOW_IT_WORKS.map((step) => (
             <div key={step.id} className="text-center">
               {/* Step number badge */}
-              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-brand-gold text-xl font-bold text-brand-gold">
+              <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full border-2 border-[#F2C311] text-xl font-bold text-[#F2C311]">
                 {step.step}
               </div>
 
@@ -83,12 +83,12 @@ export default function HowItWorks() {
               </div>
 
               {/* Title */}
-              <h3 className="mb-2 text-lg font-semibold text-black">
+              <h3 className="mb-2 text-lg font-semibold text-white">
                 {step.title}
               </h3>
 
               {/* Description */}
-              <p className="text-sm leading-relaxed text-black">
+              <p className="text-sm leading-relaxed text-white">
                 {step.description}
               </p>
             </div>
