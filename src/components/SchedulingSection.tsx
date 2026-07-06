@@ -79,7 +79,7 @@ export default function SchedulingSection() {
 
   return (
     <>
-      <section id="scheduling" className="section-padding bg-black">
+      <section id="scheduling" className="section-padding border-b border-gray-400 bg-black">
         <div className="mx-auto max-w-4xl">
           {/* ---- Section header ---- */}
           <div className="mb-12 text-center">

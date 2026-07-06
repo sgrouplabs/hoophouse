@@ -56,7 +56,7 @@ function StepIcon({ icon }: { icon: HowItWorksStep["icon"] }) {
 
 export default function HowItWorks() {
   return (
-    <section id="how-it-works" className="section-padding bg-black">
+    <section id="how-it-works" className="section-padding border-b border-gray-400 bg-black">
       <div className="mx-auto max-w-7xl">
         {/* ---- Section header ---- */}
         <div className="mb-16 text-center">

@@ -138,7 +138,7 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="section-padding bg-black">
+    <section id="faq" className="section-padding border-b border-gray-400 bg-black">
       <div className="mx-auto max-w-4xl">
         {/* ---- Section header ---- */}
         <div className="mb-12 text-center">

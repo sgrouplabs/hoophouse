@@ -16,7 +16,7 @@ import { SITE } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section className="bg-black">
+    <section className="border-b border-gray-400 bg-black">
       <div className="mx-auto max-w-7xl px-6 py-24 md:px-12 md:py-32">
         <div className="max-w-3xl">
           {/* Headline */}
