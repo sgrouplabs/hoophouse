@@ -1,15 +1,14 @@
 /**
  * ============================================================================
- * Scheduling Section (Client Component — Cal.com inline embed)
+ * Scheduling Section (Client Component — Cal.com modal buttons)
  * ============================================================================
  *
- * Full-width section on the landing page with an embedded Cal.com widget
- * to handle the free automated booking and calendar sync.
+ * Full-width section on the landing page with three buttons that open Cal.com
+ * modal popups for different court rental types.
  *
  * DESIGN RULES: Flat white background, minimalist header, no basketball
- * imagery. The Cal.com embed sits inside a bordered container.
- * ============================================================================
- */
+ * imagery. Solid brand-orange buttons with hover states.
+ * ============================================================================ */
 
 /*
  * ============================================================================
@@ -28,58 +27,45 @@ export default function SchedulingSection() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    /* ---- Cal.com IIFE — creates the Cal namespace & queues the inline call ---- */
-    const setupCal = () => {
-      (function (C, A, L) {
-        let p = function (a: any, ar: any) { a.q.push(ar); };
-        let d = C.document;
-        C.Cal =
-          C.Cal ||
-          function () {
-            let cal = C.Cal;
-            let ar = arguments;
-            if (!cal.loaded) {
-              cal.ns = {};
-              cal.q = cal.q || [];
-              d.head.appendChild(d.createElement("script")).src = A;
-              cal.loaded = true;
-            }
-            if (ar[0] === L) {
-              const api = function () { p(api, arguments); };
-              const namespace = ar[1];
-              api.q = api.q || [];
-              if (typeof namespace === "string") {
-                cal.ns[namespace] = cal.ns[namespace] || api;
-                p(cal.ns[namespace], ar);
-                p(cal, ["initNamespace", namespace]);
-              } else p(cal, ar);
-              return;
-            }
-            p(cal, ar);
-          };
-      })(window, "https://app.cal.com/embed/embed.js", "init");
+    /* ---- Cal.com element-click base script (modal trigger) ---- */
+    (function (C, A, L) {
+      let p = function (a, ar) { a.q.push(ar); };
+      let d = C.document;
+      C.Cal =
+        C.Cal ||
+        function () {
+          let cal = C.Cal;
+          let ar = arguments;
+          if (!cal.loaded) {
+            cal.ns = {};
+            cal.q = cal.q || [];
+            d.head.appendChild(d.createElement("script")).src = A;
+            cal.loaded = true;
+          }
+          if (ar[0] === L) {
+            const api = function () { p(api, arguments); };
+            const namespace = ar[1];
+            api.q = api.q || [];
+            if (typeof namespace === "string") {
+              cal.ns[namespace] = cal.ns[namespace] || api;
+              p(cal.ns[namespace], ar);
+              p(cal, ["initNamespace", namespace]);
+            } else p(cal, ar);
+            return;
+          }
+          p(cal, ar);
+        };
+    })(window, "https://app.cal.com/embed/embed.js", "init");
 
-      /* Initialise the namespace — embed.js is loaded asynchronously. */
-      (window as any).Cal("init", "courtrental", { origin: "https://app.cal.com" });
-      (window as any).Cal.config = (window as any).Cal.config || {};
-      (window as any).Cal.config.forwardQueryParams = true;
+    /* ---- Initialise all three namespaces ---- */
+    window.Cal("init", "courtrental", { origin: "https://app.cal.com" });
+    window.Cal("init", "full-court-rental", { origin: "https://app.cal.com" });
+    window.Cal("init", "half-court-rental", { origin: "https://app.cal.com" });
 
-      /* Render the inline widget once the container div is mounted.
-         The Cal.com SDK will queue this call and execute it after embed.js loads. */
-      if (containerRef.current) {
-        (window as any).Cal.ns.courtrental("inline", {
-          elementOrSelector: "#my-cal-inline-courtrental",
-          config: { layout: "month_view", useSlotsViewOnSmallScreen: "true" },
-          calLink: "hoophouse/courtrental",
-        });
-        (window as any).Cal.ns.courtrental("ui", {
-          hideEventTypeDetails: false,
-          layout: "month_view",
-        });
-      }
-    };
-
-    setupCal();
+    /* ---- Apply UI config for each namespace ---- */
+    window.Cal.ns.courtrental("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    window.Cal.ns["full-court-rental"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    window.Cal.ns["half-court-rental"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
   }, []);
 
   return (
@@ -91,17 +77,38 @@ export default function SchedulingSection() {
             Book Your <span className="text-brand-orange">Court</span>
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-brand-gray-mid">
-            Select a date and time below. You&apos;ll receive a confirmation
-            email with your unique access code instantly after booking.
+            Choose a booking type below. A calendar will open so you can
+            pick your date, time, and confirm instantly.
           </p>
         </div>
 
-        {/* ---- Cal.com Inline Embed ---- */}
-        <div
-          ref={containerRef}
-          style={{ width: "100%", height: "100%", overflow: "scroll" }}
-          id="my-cal-inline-courtrental"
-        />
+        {/* ---- Three booking buttons ---- */}
+        <div ref={containerRef} className="grid gap-6 sm:grid-cols-3">
+          <button
+            className="btn-cta min-h-[60px] text-lg"
+            data-cal-link="hoophouse/courtrental"
+            data-cal-namespace="courtrental"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            Open Gym
+          </button>
+          <button
+            className="btn-cta min-h-[60px] text-lg"
+            data-cal-link="hoophouse/full-court-rental"
+            data-cal-namespace="full-court-rental"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            Full Court Rental
+          </button>
+          <button
+            className="btn-cta min-h-[60px] text-lg"
+            data-cal-link="hoophouse/half-court-rental"
+            data-cal-namespace="half-court-rental"
+            data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true"}'
+          >
+            Half Court Rental
+          </button>
+        </div>
       </div>
     </section>
   );
