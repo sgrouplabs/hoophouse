@@ -21,8 +21,10 @@ export interface AEOFAQItem {
   id: string;
   /** Voice-search long-tail question (matches natural speech). */
   question: string;
-  /** Conversational answer as React JSX (not raw HTML strings). */
+  /** Conversational answer as React JSX for rendering in the FAQ accordion. */
   answer: ReactNode;
+  /** Plain-text version of the answer — used exclusively for JSON-LD/SEO schema. */
+  plainTextAnswer: string;
   /** Keyword tags for SEO. */
   keywords: string[];
 }
@@ -48,6 +50,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         today.
       </>
     ),
+    plainTextAnswer:
+      "Flaget Hoop House 502 is located at 604 S 44th St in the Shawnee neighborhood of West Louisville (zip 40214). We have a free parking lot directly in front of the facility, making it easy to find whether you're coming from St. Matthews, Portland, or anywhere else in the metro. Learn more about our story and community mission, or book a court session today.",
     keywords: [
       "Hoop House 502 location",
       "Louisville basketball court address",
@@ -78,6 +82,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         to learn why this project matters.
       </>
     ),
+    plainTextAnswer:
+      "You can support Flaget Hoop House 502 through our GoFundMe campaign by visiting gofund.me/8072dffdc. Every dollar goes directly back into the facility — covering HVAC repairs, court resurfacing, and ongoing costs that keep this community space open for young people in Louisville. Even small contributions make a real difference. Read about our mission to learn why this project matters.",
     keywords: [
       "Hoop House 502 donate",
       "Flaget Hoop House GoFundMe",
@@ -101,6 +107,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         to learn how a family building became a neighborhood cornerstone.
       </>
     ),
+    plainTextAnswer:
+      "Flaget Hoop House 502 was founded by Paul White, a Louisville native who inherited the building from his grandfather. Paul transformed his grandfather's legacy into a safe, 24/7 community hub in the Shawnee neighborhood — offering youth basketball, tutoring, and mental health support. Read the full founder story to learn how a family building became a neighborhood cornerstone.",
     keywords: [
       "Hoop House 502 founder",
       "Paul White Hoop House Louisville",
@@ -133,6 +141,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         .
       </>
     ),
+    plainTextAnswer:
+      "Flaget Hoop House 502 offers three core programs for the Louisville community: (1) Youth Basketball — 24/7 self-service court access for players of all ages and skill levels, (2) Tutoring & Education — free homework help and college prep for Shawnee neighborhood students, and (3) Mental Health Support — partnerships with local counselors offering sliding-scale sessions. We also host youth tournaments, adult leagues, skills clinics, and pickup games. Book a court now or learn more about our programs.",
     keywords: [
       "Hoop House 502 youth programs",
       "Louisville basketball tutoring",
@@ -157,6 +167,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         waiting.
       </>
     ),
+    plainTextAnswer:
+      "Booking a court at Flaget Hoop House 502 is quick and easy — just visit our booking page, pick your date and time, and pay online. Half-court rentals start at $30/hour (up to 6 players) and full-court rentals are $50/hour (up to 14 players). After booking, you'll receive a unique access code via email instantly. No phone calls, no front desk, no waiting.",
     keywords: [
       "book basketball court Louisville",
       "Hoop House 502 pricing",
@@ -176,6 +188,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         or a late-night session after 11 PM, the court is yours.
       </>
     ),
+    plainTextAnswer:
+      "Flaget Hoop House 502 is open 24 hours a day, 7 days a week, 365 days a year. There's no check-in time or closing time — you book your own window and use your access code whenever you need. Whether you want an early-morning shootaround at 5 AM or a late-night session after 11 PM, the court is yours.",
     keywords: [
       "Hoop House 502 hours",
       "24/7 basketball court Louisville",
@@ -200,6 +214,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         and we&apos;ll email you the access code.
       </>
     ),
+    plainTextAnswer:
+      "Just bring your basketball shoes, water bottle, and your team — we provide the court, the balls (for half-court rentals), the scoreboard, and the Bluetooth sound system. For full-court rentals, a Gatorade cooler is included. We're located at 604 S 44th St with free parking out front, so arrive early to grab a spot. Book your time slot and we'll email you the access code.",
     keywords: [
       "what to bring basketball court Louisville",
       "Hoophouse 502 what to bring",
@@ -224,6 +240,8 @@ export const AEO_FAQ_ITEMS: AEOFAQItem[] = [
         .
       </>
     ),
+    plainTextAnswer:
+      "Absolutely. Flaget Hoop House 502 was created as a safe space for young people in West Louisville. The facility features security cameras monitored remotely, keyless entry via personal access codes (so only booked guests can enter), and a mission centered on keeping youth engaged through sports, tutoring, and mentorship. Parents feel comfortable letting their kids use the facility, and our programming — including free tutoring and mental health support — shows we take that trust seriously. Read about our community mission.",
     keywords: [
       "Hoop House 502 safe for kids",
       "family friendly basketball Louisville",
@@ -248,7 +266,7 @@ export function buildFAQJSONLDFragment(): string {
     name: item.question,
     acceptedAnswer: {
       "@type": "Answer" as const,
-      text: item.answer.toString().replace(/<[^>]*>/g, ""), // Strip JSX/HTML tags for the raw answer text
+      text: item.plainTextAnswer,
     },
   }));
 
