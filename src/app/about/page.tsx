@@ -183,12 +183,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="https://gofund.me/8072dffdc"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/donate"
               className="btn-cta inline-flex"
             >
-              Donate on GoFundMe →
+              Donate Now →
             </Link>
             <Link
               href={SITE.calcomLink}

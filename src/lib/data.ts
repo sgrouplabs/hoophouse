@@ -50,6 +50,16 @@ export const SITE = {
 
   /** Liability waiver page (placeholder — create later). */
   waiverLink: "/waiver",
+
+  /** GoFundMe campaign link. */
+  gofundmeLink: "https://gofund.me/8072dffdc",
+
+  /** PayPal donation link (hosted button — accepts PayPal, Venmo, debit/credit). */
+  paypalDonateLink:
+    "https://www.paypal.com/donate/?hosted_button_id=WZ32FMFXJHBRQ",
+
+  /** QR code image for the PayPal donation link (in /public). */
+  donateQrImage: "/donate-qr.png",
 } as const;
 
 // -----------------------------------------------------------------------------
@@ -63,6 +73,7 @@ export const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "How It Works", href: "/#how-it-works" },
+  { label: "Donate", href: "/donate" },
   { label: "Book Court", href: "https://cal.com/hoophouse", cta: true },
 ] as const;
 

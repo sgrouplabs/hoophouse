@@ -72,6 +72,14 @@ export default function Footer() {
               </li>
               <li>
                 <Link
+                  href="/donate"
+                  className="transition-colors hover:text-white"
+                >
+                  Donate
+                </Link>
+              </li>
+              <li>
+                <Link
                   href={SITE.waiverLink}
                   className="transition-colors hover:text-white"
                 >

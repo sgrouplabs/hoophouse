@@ -16,6 +16,7 @@
  * ============================================================================ */
 
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Anton, Epilogue, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
@@ -84,14 +85,12 @@ export default function RootLayout({
           role="region"
           aria-label="Donation announcement"
         >
-          <a
-            href="https://gofund.me/8072dffdc"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/donate"
             className="font-semibold text-[#F2C311] underline decoration-2 underline-offset-2 transition-opacity hover:opacity-80"
           >
-            We are accepting donations. Click here to donate to our GoFundMe!
-          </a>
+            We are accepting donations. Click here to donate!
+          </Link>
         </div>
 
         {/* Navbar — client component (mobile menu toggle needs useState) */}
