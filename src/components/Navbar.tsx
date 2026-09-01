@@ -21,9 +21,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-400 bg-black">
-      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-12 px-6 py-4 md:px-12">
+      <nav className="relative mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
         {/* ---- Logo (image) ---- */}
-        <Link href="/" aria-label={SITE.name} className="mr-auto">
+        <Link href="/" aria-label={SITE.name} className="relative z-10">
           <img
             src="/logo.png"
             alt={SITE.name}
@@ -31,8 +31,8 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* ---- Desktop Nav Links ---- */}
-        <div className="hidden items-center gap-10 md:flex">
+        {/* ---- Desktop Nav Links (absolutely centered in the bar) ---- */}
+        <div className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-10 md:flex">
           {NAV_LINKS.map((link) =>
             "cta" in link ? (
               <Link
