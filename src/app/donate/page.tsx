@@ -50,7 +50,7 @@ export default function DonatePage() {
       </section>
 
       {/* ---- Option 1: GoFundMe ---- */}
-      <section className="section-padding border-t border-white/10 bg-black text-white">
+      <section className="section-padding border-t-2 border-white/40 bg-black text-white">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-6 md:grid-cols-2 md:px-12">
           <div>
             <span className="text-xs font-semibold uppercase tracking-wide text-[#F2C311]">
@@ -91,7 +91,7 @@ export default function DonatePage() {
       </section>
 
       {/* ---- Option 2: PayPal ---- */}
-      <section className="section-padding border-t border-white/10 bg-brand-black text-white">
+      <section className="section-padding border-t-2 border-white/40 bg-brand-black text-white">
         <div className="mx-auto grid max-w-5xl items-center gap-10 px-6 md:grid-cols-2 md:px-12">
           <div className="order-2 rounded-2xl border border-gray-400 bg-black p-8 text-center md:order-1">
             <Image
