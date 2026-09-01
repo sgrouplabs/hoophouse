@@ -36,7 +36,7 @@
 
   /* Font tokens */
   --font-display: var(--font-anton);
-  --font-sans: var(--font-epilogue);
+  --font-sans: var(--font-manrope);
 }
 
 @theme inline {
@@ -51,7 +51,7 @@
   --color-brand-gray-mid: var(--color-gray-mid);
   --color-brand-gray-border: var(--color-gray-border);
 
-  --font-sans: var(--font-epilogue);
+  --font-sans: var(--font-manrope);
   --font-display: var(--font-anton);
   --font-bebas-neue: var(--font-bebas-neue);
 }
@@ -63,7 +63,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-epilogue), Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -72,7 +72,7 @@ body {
  * ---------------------------------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-bebas-neue), var(--font-epilogue), sans-serif;
+  font-family: var(--font-bebas-neue), var(--font-manrope), sans-serif;
   text-transform: uppercase;
   letter-spacing: 0.1em; /* tracking-widest */
 }

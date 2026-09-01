@@ -17,7 +17,7 @@
 
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Anton, Epilogue, Bebas_Neue } from "next/font/google";
+import { Anton, Manrope, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -33,12 +33,11 @@ const anton = Anton({
   display: "swap",
 });
 
-// Epilogue — modern sans-serif for body, nav, buttons. Matches AmeriSports.
-const epilogue = Epilogue({
-  variable: "--font-epilogue",
+// Manrope — soft-geometric sans for body, nav, buttons.
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  style: ["normal", "italic"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -68,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${anton.variable} ${epilogue.variable} ${bebasNeue.variable} h-full antialiased`}
+      className={`${anton.variable} ${manrope.variable} ${bebasNeue.variable} h-full antialiased`}
     >
       <head>
         {/* JSON-LD Structured Data — Organization + LocalBusiness + FAQPage */}
