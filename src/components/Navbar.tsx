@@ -21,9 +21,9 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gray-400 bg-black">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-12">
+      <nav className="mx-auto flex max-w-7xl items-center justify-center gap-12 px-6 py-4 md:px-12">
         {/* ---- Logo (image) ---- */}
-        <Link href="/" aria-label={SITE.name}>
+        <Link href="/" aria-label={SITE.name} className="mr-auto">
           <img
             src="/logo.png"
             alt={SITE.name}
@@ -32,7 +32,7 @@ export default function Navbar() {
         </Link>
 
         {/* ---- Desktop Nav Links ---- */}
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-10 md:flex">
           {NAV_LINKS.map((link) =>
             "cta" in link ? (
               <Link
@@ -40,7 +40,7 @@ export default function Navbar() {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-cta"
+                className="btn-cta !px-8 !py-3.5 !text-xl"
               >
                 {link.label}
               </Link>
@@ -48,7 +48,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-white transition-colors hover:text-[#F2C311]"
+                className="text-xl font-medium text-white transition-colors hover:text-[#F2C311]"
               >
                 {link.label}
               </Link>
@@ -99,8 +99,8 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
                 className={
                   "cta" in link
-                    ? "btn-cta w-full"
-                    : "text-base font-medium text-white hover:text-[#F2C311]"
+                    ? "btn-cta w-full !text-xl"
+                    : "text-xl font-medium text-white hover:text-[#F2C311]"
                 }
                 target={"cta" in link ? "_blank" : undefined}
                 rel={"cta" in link ? "noopener noreferrer" : undefined}
